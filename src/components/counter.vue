@@ -4,9 +4,9 @@ import CountUp from 'vue-countup-v3'
 import { ref } from 'vue'
 import { usePush } from 'notivue'
 import { useNow, useDateFormat } from '@vueuse/core'
+import { IconCalculator } from '@tabler/icons-vue'
 
 import { useSampleStore } from '@/stores/sample'
-import { IconCalculator } from '@tabler/icons-vue'
 
 const push = usePush()
 const formatted = useDateFormat(useNow(), 'HH:mm:ss', { locales: 'pt-BR' })
@@ -38,13 +38,13 @@ function decrement (value) {
         {{ title }}
       </span>
     </div>
-    <div class="text-3xl font-bold font-mono">
+    <div class="text-3xl font-monospace">
       <CountUp
         :start-val="startValue"
         :end-val="sampleStore.getCounter"
       />
     </div>
-    <div class="font-bold font-mono">
+    <div class="text-2xl font-monospace">
       {{ formatted }}
     </div>
     <div class="flex flex-row gap-2">
@@ -75,3 +75,11 @@ function decrement (value) {
     </div>
   </div>
 </template>
+
+<style lang="sass" scoped>
+
+button
+  text-transform: uppercase
+  font-weight: 700
+
+</style>

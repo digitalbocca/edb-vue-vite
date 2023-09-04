@@ -3,8 +3,8 @@
 import { ref } from 'vue'
 import { usePush } from 'notivue'
 import { v4 as uuidv4 } from 'uuid'
-
 import { IconShoppingBag } from '@tabler/icons-vue'
+
 import PotatoIcon from '@/components/icons/potato-icon.vue'
 
 const push = usePush()
@@ -63,3 +63,11 @@ function remove () {
     </div>
   </div>
 </template>
+
+<style lang="sass" scoped>
+
+button
+  text-transform: uppercase
+  font-weight: 700
+
+</style>
