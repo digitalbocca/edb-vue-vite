@@ -5,6 +5,7 @@ import { usePush } from 'notivue'
 import { v4 as uuidv4 } from 'uuid'
 import { IconShoppingBag } from '@tabler/icons-vue'
 
+import Button from '@/components/button.vue'
 import HorizontalCard from '@/components/horizontal-card.vue'
 import PotatoIcon from '@/components/icons/potato-icon.vue'
 
@@ -49,18 +50,17 @@ function remove () {
       </div>
     </div>
     <div class="flex flex-row gap-2">
-      <button
-        class="rounded bg-green-700 text-white hover:cursor-pointer py-2 px-4"
-        @click="add()"
-      >
-        Fritar
-      </button>
-      <button
-        class="rounded bg-red-700 text-white hover:cursor-pointer py-2 px-4"
-        @click="remove()"
-      >
-        Vender
-      </button>
+      <Button
+        label="Fritar"
+        variant="success"
+        @clicked="add()"
+      />
+
+      <Button
+        label="Vender"
+        variant="danger"
+        @clicked="remove()"
+      />
     </div>
   </HorizontalCard>
 </template>

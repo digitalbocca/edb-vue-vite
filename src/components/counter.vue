@@ -6,6 +6,7 @@ import { usePush } from 'notivue'
 import { useNow, useDateFormat } from '@vueuse/core'
 import { IconCalculator } from '@tabler/icons-vue'
 
+import Button from '@/components/button.vue'
 import HorizontalCard from '@/components/horizontal-card.vue'
 
 import { useSampleStore } from '@/stores/sample'
@@ -50,30 +51,29 @@ function decrement (value) {
       {{ formatted }}
     </div>
     <div class="flex flex-row gap-2">
-      <button
-        class="rounded bg-green-700 text-white hover:cursor-pointer py-2 px-4"
-        @click="increment(1)"
-      >
-        +1
-      </button>
-      <button
-        class="rounded bg-green-700 text-white hover:cursor-pointer py-2 px-4"
-        @click="increment(5)"
-      >
-        +5
-      </button>
-      <button
-        class="rounded bg-red-700 text-white hover:cursor-pointer py-2 px-4"
-        @click="decrement(5)"
-      >
-        -5
-      </button>
-      <button
-        class="rounded bg-red-700 text-white hover:cursor-pointer py-2 px-4"
-        @click="decrement(1)"
-      >
-        -1
-      </button>
+      <Button
+        label="+1"
+        variant="success"
+        @clicked="increment(1)"
+      />
+
+      <Button
+        label="+5"
+        variant="success"
+        @clicked="increment(5)"
+      />
+
+      <Button
+        label="-5"
+        variant="danger"
+        @clicked="decrement(5)"
+      />
+
+      <Button
+        label="-1"
+        variant="danger"
+        @clicked="decrement(1)"
+      />
     </div>
   </HorizontalCard>
 </template>
