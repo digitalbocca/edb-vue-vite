@@ -5,6 +5,7 @@ import { usePush } from 'notivue'
 import { v4 as uuidv4 } from 'uuid'
 import { IconShoppingBag } from '@tabler/icons-vue'
 
+import HorizontalCard from '@/components/horizontal-card.vue'
 import PotatoIcon from '@/components/icons/potato-icon.vue'
 
 const push = usePush()
@@ -29,7 +30,7 @@ function remove () {
 </script>
 
 <template>
-  <div class="flex flex-row justify-between items-center gap-4 p-4 m-4 bg-slate-100 rounded">
+  <HorizontalCard>
     <div class="flex flex-row gap-2">
       <IconShoppingBag/>
       <span>
@@ -61,7 +62,7 @@ function remove () {
         Vender
       </button>
     </div>
-  </div>
+  </HorizontalCard>
 </template>
 
 <style lang="sass" scoped>

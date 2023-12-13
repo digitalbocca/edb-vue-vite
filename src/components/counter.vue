@@ -6,6 +6,8 @@ import { usePush } from 'notivue'
 import { useNow, useDateFormat } from '@vueuse/core'
 import { IconCalculator } from '@tabler/icons-vue'
 
+import HorizontalCard from '@/components/horizontal-card.vue'
+
 import { useSampleStore } from '@/stores/sample'
 
 const push = usePush()
@@ -31,7 +33,7 @@ function decrement (value) {
 </script>
 
 <template>
-  <div class="flex flex-row justify-between items-center gap-4 p-4 m-4 bg-slate-100 rounded">
+  <HorizontalCard>
     <div class="flex flex-row gap-2">
       <IconCalculator/>
       <span>
@@ -73,7 +75,7 @@ function decrement (value) {
         -1
       </button>
     </div>
-  </div>
+  </HorizontalCard>
 </template>
 
 <style lang="sass" scoped>
