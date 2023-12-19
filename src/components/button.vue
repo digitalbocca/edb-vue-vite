@@ -4,7 +4,8 @@ import { computed } from 'vue'
 
 const props = defineProps([
   'label',
-  'variant'
+  'variant',
+  'disabled'
 ])
 
 defineEmits([
@@ -13,11 +14,11 @@ defineEmits([
 
 const buttonVariantClass = computed(() => {
   const variants = {
-    primary: 'bg-cyan-600',
-    secondary: 'bg-sky-600',
-    success: 'bg-emerald-600',
-    warning: 'bg-yellow-600',
-    danger: 'bg-red-600'
+    primary: 'primary-button',
+    secondary: 'secondary-button',
+    success: 'success-button',
+    warning: 'warning-button',
+    danger: 'danger-button'
   }
 
   return props.variant ? variants[props.variant] : variants.primary
@@ -27,10 +28,52 @@ const buttonVariantClass = computed(() => {
 
 <template>
   <button
-    class="rounded text-white hover:cursor-pointer py-2 px-4"
+    class="custom-button rounded text-white hover:cursor-pointer py-2 px-4"
     :class="buttonVariantClass"
+    :disabled="disabled"
     @click="$emit('clicked')"
   >
     {{ label }}
   </button>
 </template>
+
+<style lang="sass" scoped>
+
+.primary-button
+  background-color: #3498db
+
+  &:hover
+    background-color: #2980b9
+
+.secondary-button
+  background-color: #34495e
+
+  &:hover
+    background-color: #2c3e50
+
+.success-button
+  background-color: #2ecc71
+
+  &:hover
+    background-color: #27ae60
+
+.warning-button
+  background-color: #e67e22
+
+  &:hover
+    background-color: #d35400
+
+.danger-button
+  background-color: #e74c3c
+
+  &:hover
+    background-color: #c0392b
+
+.custom-button
+  transition: background-color 0.2s ease
+
+  &:disabled
+    background-color: #bdc3c7
+    cursor: not-allowed
+
+</style>
