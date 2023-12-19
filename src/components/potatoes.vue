@@ -39,7 +39,7 @@ function remove () {
       </span>
     </div>
     <div
-      class="flex flex-row items-center justify-start flex-wrap gap-2"
+      class="flex flex-row items-center justify-start flex-wrap gap-2 w-full px-8"
       v-auto-animate
     >
       <div
