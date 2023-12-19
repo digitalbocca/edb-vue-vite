@@ -15,17 +15,17 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",
     "autoprefixer": "^10.4.16",
-    "eslint": "^8.55.0",
+    "eslint": "^8.56.0",
     "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-n": "^16.4.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-vue": "^9.19.2",
     "postcss": "^8.4.32",
     "sass": "^1.69.5",
-    "tailwindcss": "^3.3.6",
-    "vite": "^5.0.8",
-    "vite-plugin-vue-devtools": "^1.0.0-rc.7"
+    "tailwindcss": "^3.3.7",
+    "vite": "^5.0.10",
+    "vite-plugin-vue-devtools": "^1.0.0-rc.8"
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.8.1",
@@ -35,7 +35,7 @@
     "notivue": "^1.4.5",
     "pinia": "^2.1.7",
     "uuid": "^9.0.1",
-    "vue": "^3.3.11",
+    "vue": "^3.3.12",
     "vue-countup-v3": "^1.4.0",
     "vue-router": "^4.2.5"
   }
