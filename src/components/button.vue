@@ -71,6 +71,7 @@ const buttonVariantClass = computed(() => {
 
 .custom-button
   transition: background-color 0.2s ease
+  font-weight: 700
 
   &:disabled
     background-color: #bdc3c7
