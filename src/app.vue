@@ -1,12 +1,14 @@
 <script setup>
 
-import { Notivue, Notifications } from 'notivue'
+import { Notivue, Notifications, NotivueSwipe } from 'notivue'
 
 </script>
 
 <template>
   <Notivue v-slot="item">
-    <Notifications :item="item"/>
+    <NotivueSwipe :item="item">
+      <Notifications :item="item"/>
+    </NotivueSwipe>
   </Notivue>
 
   <RouterView/>

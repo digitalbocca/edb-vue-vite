@@ -16,12 +16,13 @@ const notivueConfig = {
   enqueue: true
 }
 
+const notivue = createNotivue(notivueConfig)
+
 const app = createApp(App)
 
 app.use(router)
 app.use(store)
 app.use(autoAnimatePlugin)
-
-createNotivue(app, notivueConfig)
+app.use(notivue)
 
 app.mount('#app')
