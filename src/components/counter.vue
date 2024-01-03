@@ -2,7 +2,7 @@
 
 import CountUp from 'vue-countup-v3'
 import { ref } from 'vue'
-import { usePush } from 'notivue'
+import { push } from 'notivue'
 import { useNow, useDateFormat } from '@vueuse/core'
 import { IconCalculator } from '@tabler/icons-vue'
 
@@ -11,7 +11,6 @@ import HorizontalCard from '@/components/horizontal-card.vue'
 
 import { useSampleStore } from '@/stores/sample'
 
-const push = usePush()
 const formatted = useDateFormat(useNow(), 'HH:mm:ss', { locales: 'pt-BR' })
 const sampleStore = useSampleStore()
 
