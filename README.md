@@ -4,7 +4,7 @@
   <h4 align="center">
     Inicie um projeto com vue 3 e vite.
   </h4>
-  <p align="center">(c)2023 - Estúdio Digital Bocca</p>
+  <p align="center">(c)2023-2024 Estúdio Digital Bocca</p>
 </p>
 
 ---
