@@ -21,7 +21,9 @@ const buttonVariantClass = computed(() => {
     danger: 'danger-button'
   }
 
-  return props.variant ? variants[props.variant] : variants.primary
+  const displayVariantConditions = props.variant && variants[props.variant]
+
+  return displayVariantConditions ? variants[props.variant] : variants.primary
 })
 
 </script>
