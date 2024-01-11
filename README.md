@@ -29,6 +29,7 @@ npm init @digitalbocca/edb-app vue-vite ./caminho/do/projeto
 
 - Vite
 - Vue 3
+- Vitest (coverage, UI, Vue Test Utils)
 - Vue Router
 - Pinia
 - Tailwind CSS
