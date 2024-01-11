@@ -2,7 +2,7 @@
 
 import { IconHandFinger } from '@tabler/icons-vue'
 
-import Button from '@/components/button.vue'
+import Button from '@/components/base/button'
 import HorizontalCard from '@/components/horizontal-card.vue'
 
 defineProps(['title'])

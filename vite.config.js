@@ -15,5 +15,21 @@ export default defineConfig({
   plugins: [
     devtools(),
     vue()
-  ]
+  ],
+  test: {
+    environment: 'jsdom',
+    reporters: [
+      'default'
+    ],
+    coverage: {
+      enabled: true,
+      include: [
+        'src/**'
+      ],
+      reportsDirectory: './tests/unit/coverage',
+      reporter: [
+        'html'
+      ]
+    }
+  }
 })

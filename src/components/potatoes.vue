@@ -5,7 +5,7 @@ import { push } from 'notivue'
 import { v4 as uuidv4 } from 'uuid'
 import { IconShoppingBag } from '@tabler/icons-vue'
 
-import Button from '@/components/button.vue'
+import Button from '@/components/base/button'
 import HorizontalCard from '@/components/horizontal-card.vue'
 import PotatoIcon from '@/components/icons/potato-icon.vue'
 
