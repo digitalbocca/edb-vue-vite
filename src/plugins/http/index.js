@@ -26,7 +26,7 @@ const successRequestInterceptor = req => {
    *
    * req.headers = {
    *   ...req.headers,
-   *   Authentication: `Bearer ${1}`
+   *   Authorization: `Bearer ${1}`
    * }
    *
    */
