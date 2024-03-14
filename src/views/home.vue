@@ -1,6 +1,7 @@
 <script setup>
 
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
+import { vConfetti } from '@neoconfetti/vue'
 
 import Buttons from '@/components/buttons.vue'
 import Counter from '@/components/counter.vue'
@@ -14,15 +15,38 @@ const envTextExample = computed(() => {
   return envExample.length ? envExample : DEFAULT_ENV_TEXT
 })
 
+const showConfetti = ref(false)
+
+const toggleConfetti = () => {
+  showConfetti.value = !showConfetti.value
+}
+
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div
+    class="flex flex-col"
+  >
     <Counter title="Counter"/>
     <Potatoes title="Batatinhas"/>
     <Buttons title="Buttons"/>
 
-    <p class="text-center mt-4">
+    <div
+      style=""
+      class="flex flex-row justify-center"
+    >
+      <div
+        v-confetti
+        v-if="showConfetti"
+      >
+      <!-- // -->
+      </div>
+    </div>
+
+    <p
+      class="text-center mt-4"
+      @click="toggleConfetti()"
+    >
       {{ envTextExample }}
     </p>
   </div>
