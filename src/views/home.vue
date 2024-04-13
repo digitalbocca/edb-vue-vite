@@ -3,6 +3,8 @@
 import { computed, ref } from 'vue'
 import { vConfetti } from '@neoconfetti/vue'
 
+import { IconBalloon } from '@tabler/icons-vue'
+
 import Buttons from '@/components/buttons.vue'
 import Counter from '@/components/counter.vue'
 import Potatoes from '@/components/potatoes.vue'
@@ -49,5 +51,15 @@ const toggleConfetti = () => {
     >
       {{ envTextExample }}
     </p>
+
+    <div
+      class="flex flex-row justify-center mt-8"
+    >
+      <IconBalloon
+        :width="48"
+        :stroke="2"
+        color="#333333"
+      />
+    </div>
   </div>
 </template>
