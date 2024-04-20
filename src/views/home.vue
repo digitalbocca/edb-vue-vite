@@ -29,17 +29,17 @@ const toggleConfetti = () => {
   <div
     class="flex flex-col"
   >
-    <Counter title="Counter"/>
-    <Potatoes title="Batatinhas"/>
-    <Buttons title="Buttons"/>
+    <Counter title="Counter" />
+    <Potatoes title="Batatinhas" />
+    <Buttons title="Buttons" />
 
     <div
       style=""
       class="flex flex-row justify-center"
     >
       <div
-        v-confetti
         v-if="showConfetti"
+        v-confetti
       >
       <!-- // -->
       </div>
