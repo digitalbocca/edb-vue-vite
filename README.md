@@ -25,6 +25,12 @@ npm init @digitalbocca/edb-app vue-vite ./caminho/do/projeto
 - Instale as dependências.
 - Modifique para sua necessidade.
 
+⚠️ **ATENÇÃO:** Caso tenha algum problema durante a instalação tente usar este comando:
+
+```bash
+npm i --legacy-peer-deps
+```
+
 ## FERRAMENTAS CONFIGURADAS
 
 - Vite
@@ -42,3 +48,4 @@ npm init @digitalbocca/edb-app vue-vite ./caminho/do/projeto
 - Notivue
 - vue countup
 - axios
+- neoconfetti
