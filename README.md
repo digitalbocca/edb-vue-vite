@@ -1,11 +1,21 @@
-<p align="center">
-  <img src="https://estudiodigitalbocca.com.br/edb-logo.svg" width="200px">
-  <h1 align="center">edb-vue-vite</h1>
+<div align="center">
+  <img
+    src="https://estudiodigitalbocca.com.br/edb-logo.svg"
+    width="200px"
+  >
+
+  <h1 align="center">
+    edb-vue-vite
+  </h1>
+
   <h4 align="center">
     Inicie um projeto com vue 3 e vite.
   </h4>
-  <p align="center">(c)2023-2024 Estúdio Digital Bocca</p>
-</p>
+
+  <p align="center">
+    (c)2023-2024 Estúdio Digital Bocca
+  </p>
+</div>
 
 ---
 
