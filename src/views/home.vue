@@ -31,7 +31,10 @@ const toggleConfetti = () => {
   >
     <Counter title="Counter" />
     <Potatoes title="Batatinhas" />
-    <Buttons title="Buttons" />
+    <Buttons
+      title="Buttons"
+      subtitle="Icon Buttons"
+    />
 
     <div
       style=""

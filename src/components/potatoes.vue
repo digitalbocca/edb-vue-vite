@@ -31,20 +31,23 @@ function remove () {
 <template>
   <HorizontalCard>
     <div class="flex flex-row gap-2">
-      <IconShoppingBag/>
+      <IconShoppingBag
+        class="w-6 h-6"
+        :stroke="1.5"
+      />
       <span>
         {{ title }}
       </span>
     </div>
     <div
-      class="flex flex-row items-center justify-start flex-wrap gap-2 w-full px-8"
       v-auto-animate
+      class="flex flex-row items-center justify-start flex-wrap gap-2 w-full px-8"
     >
       <div
         v-for="batatinha in potatoes"
         :key="batatinha.id"
       >
-        <PotatoIcon style="width: 20px;"/>
+        <PotatoIcon style="width: 20px;" />
       </div>
     </div>
     <div class="flex flex-row gap-2">

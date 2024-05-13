@@ -35,7 +35,10 @@ function decrement (value) {
 <template>
   <HorizontalCard>
     <div class="flex flex-row gap-2">
-      <IconCalculator/>
+      <IconCalculator
+        class="w-6 h-6"
+        :stroke="1.5"
+      />
       <span>
         {{ title }}
       </span>
