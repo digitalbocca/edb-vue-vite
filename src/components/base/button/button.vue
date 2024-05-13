@@ -5,7 +5,8 @@ import { computed } from 'vue'
 const props = defineProps([
   'label',
   'variant',
-  'disabled'
+  'disabled',
+  'iconPosition'
 ])
 
 defineEmits([
@@ -26,15 +27,20 @@ const buttonVariantClass = computed(() => {
   return displayVariantConditions ? variants[props.variant] : variants.primary
 })
 
+const buttonIconPositionClass = computed(() => {
+  return props.iconPosition === 'append' ? 'flex-row-reverse gap-2' : 'flex-row gap-2'
+})
+
 </script>
 
 <template>
   <button
-    class="custom-button rounded text-white hover:cursor-pointer py-2 px-4"
-    :class="buttonVariantClass"
+    class="custom-button rounded text-white hover:cursor-pointer py-2 px-4 flex items-center justify-center"
+    :class="`${buttonVariantClass} ${buttonIconPositionClass}`"
     :disabled="disabled"
     @click="$emit('clicked')"
   >
+    <slot />
     {{ label }}
   </button>
 </template>

@@ -98,4 +98,35 @@ describe('Button component', () => {
 
     expect(wrapper.emitted()).not.toHaveProperty('clicked')
   })
+
+  it('Should display the icon and label in correct order', () => {
+    const wrapper = mount(Button, {
+      slots: {
+        default: 'Icon Content'
+      },
+      props: {
+        label: 'Label Content'
+      }
+    })
+
+    const buttonContent = wrapper.text()
+
+    expect(buttonContent).toBe('Icon Content Label Content')
+  })
+
+  it('Should contain \'flex-row-reverse\' class when the iconPosition is \'append\'', () => {
+    const wrapper = mount(Button, {
+      slots: {
+        default: 'Icon Content'
+      },
+      props: {
+        label: 'Label Content',
+        iconPosition: 'append'
+      }
+    })
+
+    const buttonClasses = wrapper.classes()
+
+    expect(buttonClasses).toContain('flex-row-reverse')
+  })
 })
