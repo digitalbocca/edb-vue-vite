@@ -59,3 +59,4 @@ npm i --legacy-peer-deps
 - vue countup
 - axios
 - neoconfetti
+- husky
