@@ -4,8 +4,10 @@ import { FlatCompat } from '@eslint/eslintrc'
 
 import vue from 'eslint-plugin-vue'
 import globals from 'globals'
+import * as depend from 'eslint-plugin-depend'
 
 export default [
+  depend.configs['flat/recommended'],
   ...vue.configs['flat/recommended'],
   ...(new FlatCompat({
     baseDirectory: path.dirname(url.fileURLToPath(import.meta.url))
