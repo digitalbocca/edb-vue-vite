@@ -27,7 +27,7 @@ const toggleConfetti = () => {
 
 <template>
   <div
-    class="flex flex-col"
+    class="flex flex-col container mx-auto"
   >
     <Counter title="Counter" />
     <Potatoes title="Batatinhas" />
