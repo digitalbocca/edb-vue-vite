@@ -4,6 +4,16 @@ import devtools from 'vite-plugin-vue-devtools'
 import { resolve } from 'node:path'
 
 export default defineConfig({
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler' // or "modern"
+      },
+      sass: {
+        api: 'modern-compiler' // or "modern"
+      }
+    }
+  },
   server: {
     port: 8080
   },
