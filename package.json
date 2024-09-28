@@ -31,22 +31,22 @@
     "husky": "^9.1.6",
     "jsdom": "^25.0.1",
     "postcss": "^8.4.47",
-    "sass": "^1.79.3",
+    "sass": "^1.79.4",
     "tailwindcss": "^3.4.13",
-    "vite": "^5.4.7",
+    "vite": "^5.4.8",
     "vite-plugin-vue-devtools": "^7.4.6",
     "vitest": "^2.1.1"
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.8.2",
     "@neoconfetti/vue": "^2.2.1",
-    "@tabler/icons-vue": "^3.17.0",
+    "@tabler/icons-vue": "^3.19.0",
     "@vueuse/core": "^11.1.0",
     "axios": "^1.7.7",
     "notivue": "^2.4.5",
     "pinia": "^2.2.2",
     "uuid": "^10.0.0",
-    "vue": "^3.5.8",
+    "vue": "^3.5.10",
     "vue-countup-v3": "^1.4.2",
     "vue-router": "^4.4.5"
   }
