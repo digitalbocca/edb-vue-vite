@@ -41,6 +41,28 @@ npm init @digitalbocca/edb-app vue-vite ./caminho/do/projeto
 npm i --legacy-peer-deps
 ```
 
+### VARIÁVEIS DE AMBIENTE
+
+Crie o arquivo `.env` baseado no `sample.env`
+
+### VERIFICAR ATUALIZAÇÕES (DEPENDÊNCIAS)
+
+```bash
+npm run update
+```
+
+### INSTALAR ATUALIZAÇÕES (DEPENDÊNCIAS)
+
+```bash
+npm run upgrade
+```
+
+### VERIFICAR BOAS PRÁTICAS
+
+```bash
+npm run md
+```
+
 ## FERRAMENTAS CONFIGURADAS
 
 - Vite
