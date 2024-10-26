@@ -2,12 +2,24 @@
 
 import { computed } from 'vue'
 
-const props = defineProps([
-  'label',
-  'variant',
-  'disabled',
-  'iconPosition'
-])
+const props = defineProps({
+  label: {
+    type: String,
+    required: true
+  },
+  variant: {
+    type: String,
+    default: 'primary'
+  },
+  disabled: {
+    type: Boolean,
+    default: false
+  },
+  iconPosition: {
+    type: String,
+    default: 'prepend'
+  }
+})
 
 defineEmits([
   'clicked'

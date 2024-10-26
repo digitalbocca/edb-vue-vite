@@ -49,7 +49,7 @@ const toggleConfetti = () => {
     </div>
 
     <p
-      class="text-center mt-4"
+      class="cursor-pointer hover:animate-jump hover:animate-once hover:animate-duration-[600ms] hover:animate-delay-0 hover:animate-ease-linear text-center mt-4"
       @click="toggleConfetti()"
     >
       {{ envTextExample }}
