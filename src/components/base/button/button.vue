@@ -1,6 +1,6 @@
 <script setup>
 
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 
 const props = defineProps({
   label: {
@@ -25,23 +25,29 @@ defineEmits([
   'clicked'
 ])
 
-const buttonVariantClass = computed(() => {
-  const variants = {
-    primary: 'primary-button',
-    secondary: 'secondary-button',
-    success: 'success-button',
-    warning: 'warning-button',
-    danger: 'danger-button'
-  }
+const variants = {
+  primary: 'primary-button',
+  secondary: 'secondary-button',
+  success: 'success-button',
+  warning: 'warning-button',
+  danger: 'danger-button'
+}
 
-  const displayVariantConditions = props.variant && variants[props.variant]
+const buttonVariant = ref('')
 
-  return displayVariantConditions ? variants[props.variant] : variants.primary
-})
+const buttonVariantClass = computed(() => buttonVariant.value)
 
 const buttonIconPositionClass = computed(() => {
   return props.iconPosition === 'append' ? 'flex-row-reverse gap-2' : 'flex-row gap-2'
 })
+
+function handleVariantClass () {
+  const displayVariantConditions = props.variant && variants[props.variant]
+
+  buttonVariant.value = displayVariantConditions ? variants[props.variant] : variants.primary
+}
+
+handleVariantClass()
 
 </script>
 
