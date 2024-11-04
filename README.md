@@ -82,3 +82,4 @@ npm run md
 - axios
 - neoconfetti
 - husky
+- @number-flow/vue

@@ -5,6 +5,7 @@ import { ref } from 'vue'
 import { push } from 'notivue'
 import { useNow, useDateFormat } from '@vueuse/core'
 import { IconCalculator } from '@tabler/icons-vue'
+import NumberFlow from '@number-flow/vue'
 
 import Button from '@/components/base/button'
 import HorizontalCard from '@/components/horizontal-card.vue'
@@ -43,11 +44,28 @@ function decrement (value) {
         {{ title }}
       </span>
     </div>
-    <div class="text-3xl font-monospace">
-      <CountUp
-        :start-val="startValue"
-        :end-val="sampleStore.getCounter"
-      />
+    <div class="flex flex-col items-center">
+      <div class="text-xs text-slate-400">
+        vue-countup-v3
+      </div>
+      <div class="text-3xl font-monospace">
+        <CountUp
+          :start-val="startValue"
+          :end-val="sampleStore.getCounter"
+        />
+      </div>
+    </div>
+    <div class="flex flex-col items-center">
+      <div class="text-xs text-slate-400">
+        @number-flow/vue
+      </div>
+      <div class="text-3xl font-monospace">
+        <NumberFlow
+          :value="sampleStore.getCounter"
+          :format="{ notation: 'compact' } /* Intl.NumberFormat options */"
+          :locales="'pt-BR' /* Intl.NumberFormat locales */"
+        />
+      </div>
     </div>
     <div class="text-2xl font-monospace">
       {{ formatted }}
