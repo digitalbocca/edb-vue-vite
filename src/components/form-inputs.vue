@@ -3,8 +3,9 @@
 import { ref } from 'vue'
 import { IconForms } from '@tabler/icons-vue'
 
-import HorizontalCard from '@/components/horizontal-card.vue'
+import ContainerCard from '@/components/container-card.vue'
 import BaseTextInput from '@/components/base/input/text-input'
+import LeadBlock from '@/components/lead-block.vue'
 
 defineProps(['title'])
 
@@ -14,16 +15,14 @@ const inputRef = ref('')
 
 <template>
   <div class="flex flex-col">
-    <HorizontalCard>
-      <div class="flex flex-row gap-2">
+    <ContainerCard>
+      <LeadBlock :title="title">
         <IconForms
-          class="w-6 h-6"
+          :width="24"
+          :height="24"
           :stroke="1.5"
         />
-        <span>
-          {{ title }}
-        </span>
-      </div>
+      </LeadBlock>
 
       <div class="flex flex-row justify-center flex-wrap gap-2">
         <BaseTextInput
@@ -47,6 +46,6 @@ const inputRef = ref('')
           </template>
         </div>
       </div>
-    </HorizontalCard>
+    </ContainerCard>
   </div>
 </template>

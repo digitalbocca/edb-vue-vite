@@ -6,6 +6,7 @@ import { vConfetti } from '@neoconfetti/vue'
 import { IconBalloon } from '@tabler/icons-vue'
 
 import Buttons from '@/components/buttons.vue'
+import Clock from '@/components/clock.vue'
 import Counter from '@/components/counter.vue'
 import Potatoes from '@/components/potatoes.vue'
 
@@ -31,14 +32,15 @@ const toggleConfetti = () => {
   <div
     class="flex flex-col container mx-auto"
   >
-    <Counter title="Counter" />
-    <Potatoes title="Batatinhas" />
+    <Clock title="Horário" />
+    <Counter title="Animação em números" />
+    <Potatoes title="Animação em itens" />
     <Buttons
-      title="Buttons"
+      title="Botões"
       subtitle="Icon Buttons"
     />
     <FormInputs
-      title="Form Inputs"
+      title="Campos de formulário"
     />
 
     <div

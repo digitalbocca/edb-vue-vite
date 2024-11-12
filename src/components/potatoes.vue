@@ -6,15 +6,16 @@ import { v4 as uuidv4 } from 'uuid'
 import { IconShoppingBag } from '@tabler/icons-vue'
 
 import Button from '@/components/base/button'
-import HorizontalCard from '@/components/horizontal-card.vue'
+import ContainerCard from '@/components/container-card.vue'
 import PotatoIcon from '@/components/icons/potato-icon.vue'
+import LeadBlock from '@/components/lead-block.vue'
 
 defineProps(['title'])
 
 const potatoes = ref([])
 
 function add () {
-  potatoes.value.push({ id: uuidv4() })
+  potatoes.value.unshift({ id: uuidv4() })
   push.success('Fritou uma batatinha!')
 }
 
@@ -29,41 +30,46 @@ function remove () {
 </script>
 
 <template>
-  <HorizontalCard>
-    <div class="flex flex-row gap-2">
-      <IconShoppingBag
-        class="w-6 h-6"
-        :stroke="1.5"
-      />
-      <span>
-        {{ title }}
-      </span>
-    </div>
-    <div
-      v-auto-animate
-      class="flex flex-row items-center justify-start flex-wrap gap-2 w-full px-8"
-    >
-      <div
-        v-for="batatinha in potatoes"
-        :key="batatinha.id"
+  <ContainerCard>
+    <div class="flex flex-col gap-8 md:gap-4 md:grid md:grid-cols-4 w-full">
+      <LeadBlock
+        :title="title"
+        class="justify-center md:justify-start"
       >
-        <PotatoIcon style="width: 20px;" />
+        <IconShoppingBag
+          :width="24"
+          :height="24"
+          :stroke="1.5"
+        />
+      </LeadBlock>
+      <div
+        v-auto-animate
+        class="flex flex-row items-center justify-start flex-wrap gap-2 px-8 col-span-2 col-start-2 col-end-4 w-full"
+      >
+        <div
+          v-for="batatinha in potatoes"
+          :key="batatinha.id"
+        >
+          <PotatoIcon style="width: 20px;" />
+        </div>
+      </div>
+      <div class="flex flex-row justify-center md:justify-end items-center col-start-4">
+        <div class="flex flex-row justify-center md:justify-end gap-2 col-start-4">
+          <Button
+            label="Fritar"
+            variant="success"
+            @clicked="add()"
+          />
+
+          <Button
+            label="Vender"
+            variant="danger"
+            @clicked="remove()"
+          />
+        </div>
       </div>
     </div>
-    <div class="flex flex-row gap-2">
-      <Button
-        label="Fritar"
-        variant="success"
-        @clicked="add()"
-      />
-
-      <Button
-        label="Vender"
-        variant="danger"
-        @clicked="remove()"
-      />
-    </div>
-  </HorizontalCard>
+  </ContainerCard>
 </template>
 
 <style lang="sass" scoped>

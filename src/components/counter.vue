@@ -3,16 +3,15 @@
 import CountUp from 'vue-countup-v3'
 import { ref } from 'vue'
 import { push } from 'notivue'
-import { useNow, useDateFormat } from '@vueuse/core'
 import { IconCalculator } from '@tabler/icons-vue'
 import NumberFlow from '@number-flow/vue'
 
 import Button from '@/components/base/button'
-import HorizontalCard from '@/components/horizontal-card.vue'
+import ContainerCard from '@/components/container-card.vue'
+import LeadBlock from '@/components/lead-block.vue'
 
 import { useSampleStore } from '@/stores/sample'
 
-const formatted = useDateFormat(useNow(), 'HH:mm:ss', { locales: 'pt-BR' })
 const sampleStore = useSampleStore()
 
 defineProps(['title'])
@@ -34,16 +33,15 @@ function decrement (value) {
 </script>
 
 <template>
-  <HorizontalCard>
-    <div class="flex flex-row gap-2">
+  <ContainerCard>
+    <LeadBlock :title="title">
       <IconCalculator
-        class="w-6 h-6"
+        :width="24"
+        :height="24"
         :stroke="1.5"
       />
-      <span>
-        {{ title }}
-      </span>
-    </div>
+    </LeadBlock>
+
     <div class="flex flex-col items-center">
       <div class="text-xs text-slate-400">
         vue-countup-v3
@@ -67,9 +65,7 @@ function decrement (value) {
         />
       </div>
     </div>
-    <div class="text-2xl font-monospace">
-      {{ formatted }}
-    </div>
+
     <div class="flex flex-row gap-2">
       <Button
         label="+1"
@@ -95,7 +91,7 @@ function decrement (value) {
         @clicked="decrement(1)"
       />
     </div>
-  </HorizontalCard>
+  </ContainerCard>
 </template>
 
 <style lang="sass" scoped>

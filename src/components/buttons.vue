@@ -3,7 +3,8 @@
 import { IconHandFinger, IconMoodKidFilled } from '@tabler/icons-vue'
 
 import Button from '@/components/base/button'
-import HorizontalCard from '@/components/horizontal-card.vue'
+import ContainerCard from '@/components/container-card.vue'
+import LeadBlock from '@/components/lead-block.vue'
 
 defineProps(['title', 'subtitle'])
 
@@ -11,16 +12,14 @@ defineProps(['title', 'subtitle'])
 
 <template>
   <div class="flex flex-col">
-    <HorizontalCard>
-      <div class="flex flex-row gap-2">
+    <ContainerCard>
+      <LeadBlock :title="title">
         <IconHandFinger
-          class="w-6 h-6"
+          :width="24"
+          :height="24"
           :stroke="1.5"
         />
-        <span>
-          {{ title }}
-        </span>
-      </div>
+      </LeadBlock>
 
       <div class="flex flex-row justify-center flex-wrap gap-2">
         <Button
@@ -52,12 +51,13 @@ defineProps(['title', 'subtitle'])
           :disabled="true"
         />
       </div>
-    </HorizontalCard>
+    </ContainerCard>
 
-    <HorizontalCard>
+    <ContainerCard>
       <div class="flex flex-row gap-2">
         <IconHandFinger
-          class="w-6 h-6"
+          width="24"
+          height="24"
           :stroke="1.5"
         />
         <span>
@@ -96,6 +96,6 @@ defineProps(['title', 'subtitle'])
           />
         </Button>
       </div>
-    </HorizontalCard>
+    </ContainerCard>
   </div>
 </template>
