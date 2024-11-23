@@ -27,8 +27,16 @@
 
 Utilize o create-edb-app:
 
+### NPM/Node
+
 ```bash
 npm init @digitalbocca/edb-app vue-vite ./caminho/do/projeto
+```
+
+### Deno
+
+```bash
+deno run -A npm:@digitalbocca/create-edb-app vue-vite ./caminho/do/projeto
 ```
 
 - Entre na pasta.

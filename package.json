@@ -43,7 +43,7 @@
   "dependencies": {
     "@formkit/auto-animate": "^0.8.2",
     "@neoconfetti/vue": "^2.2.1",
-    "@number-flow/vue": "^0.2.7",
+    "@number-flow/vue": "^0.3.0",
     "@tabler/icons-vue": "^3.22.0",
     "@vueuse/core": "^11.3.0",
     "axios": "^1.7.7",
