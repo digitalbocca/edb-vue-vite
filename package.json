@@ -36,7 +36,7 @@
     "postcss": "^8.4.49",
     "sass": "^1.83.0",
     "tailwindcss": "^3.4.17",
-    "vite": "^6.0.5",
+    "vite": "^6.0.6",
     "vite-plugin-vue-devtools": "^7.6.8",
     "vitest": "^2.1.8"
   },
@@ -45,7 +45,7 @@
     "@neoconfetti/vue": "^2.2.1",
     "@number-flow/vue": "^0.3.3",
     "@tabler/icons-vue": "^3.26.0",
-    "@vueuse/core": "^12.0.0",
+    "@vueuse/core": "^12.2.0",
     "axios": "^1.7.9",
     "notivue": "^2.4.5",
     "pinia": "^2.3.0",
