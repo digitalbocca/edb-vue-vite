@@ -9,7 +9,6 @@ import NumberFlow from '@number-flow/vue'
 import Button from '@/components/base/button'
 import ContainerCard from '@/components/container-card.vue'
 import LeadBlock from '@/components/lead-block.vue'
-
 import { useSampleStore } from '@/stores/sample'
 
 const sampleStore = useSampleStore()

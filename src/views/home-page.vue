@@ -2,16 +2,13 @@
 
 import { computed, ref } from 'vue'
 import { vConfetti } from '@neoconfetti/vue'
-
 import { IconBalloon } from '@tabler/icons-vue'
 
 import Buttons from '@/components/buttons.vue'
 import Clock from '@/components/clock.vue'
 import Counter from '@/components/counter.vue'
 import Potatoes from '@/components/potatoes.vue'
-
 import FormInputs from '@/components/form-inputs.vue'
-
 import { DEFAULT_ENV_TEXT } from '@/constants'
 
 const envExample = import.meta.env.VITE_ENV_EXAMPLE ?? ''

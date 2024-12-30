@@ -1,10 +1,10 @@
 import path from 'node:path'
 import url from 'node:url'
 import { FlatCompat } from '@eslint/eslintrc'
-
 import vue from 'eslint-plugin-vue'
 import globals from 'globals'
 import * as depend from 'eslint-plugin-depend'
+import eslintPluginImportX from 'eslint-plugin-import-x'
 
 export default [
   depend.configs['flat/recommended'],
@@ -12,6 +12,7 @@ export default [
   ...(new FlatCompat({
     baseDirectory: path.dirname(url.fileURLToPath(import.meta.url))
   }).extends('eslint-config-standard')),
+  eslintPluginImportX.flatConfigs.recommended,
   {
     languageOptions: {
       ecmaVersion: 2022,
@@ -24,6 +25,18 @@ export default [
       vue
     },
     rules: {
+      'import-x/order': ['error', {
+        groups: [['builtin', 'external', 'internal']],
+        'newlines-between': 'always'
+      }],
+      'import-x/no-duplicates': 'error',
+      'import-x/no-self-import': 'error',
+      'import-x/no-unresolved': ['error', {
+        // ignore: ['^@/']
+        ignore: [
+          '^@/'
+        ]
+      }],
       'vue/max-attributes-per-line': ['error', {
         singleline: {
           max: 1
