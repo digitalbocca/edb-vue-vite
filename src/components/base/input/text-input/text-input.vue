@@ -50,7 +50,7 @@ const labelState = computed(() => {
       <input
         id="text-input"
         v-model="model"
-        class="text-input w-full"
+        class="text-input w-full bg-white rounded-sm py-2 px-4 border-gray-300 border-2 transition-colors duration-200 ease-in-out focus:border-2 focus:outline-hidden focus:border-color-lime-500 focus:transition-colors focus:duration-200 focus:ease-in-out focus:ring-transparent focus:ring-0"
         type="text"
         autocomplete="off"
         @focus="() => isFocused = true"
@@ -63,14 +63,9 @@ const labelState = computed(() => {
 <style lang="sass" scoped>
 
 .text-input
-  @apply bg-white rounded py-2 px-4
-  @apply border border-gray-300 border-2
-  @apply transition-colors duration-200 ease-in-out
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 
   &:focus
-    @apply border-2 outline-none
-    @apply transition-colors duration-200 ease-in-out ring-transparent ring-0
     border-color: var(--primary-color)
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 

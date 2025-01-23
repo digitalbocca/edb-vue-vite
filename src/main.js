@@ -6,7 +6,8 @@ import App from '@/app.vue'
 import router from '@/router'
 import store from '@/stores'
 
-import '@/sass/styles.sass'
+import '@/styles/styles.sass'
+import '@/styles/styles.css'
 import 'notivue/notifications.css'
 import 'notivue/animations.css'
 

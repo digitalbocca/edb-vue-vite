@@ -13,7 +13,7 @@
   </h4>
 
   <p align="center">
-    (c)2023-2024 Estúdio Digital Bocca
+    (c)2023-2025 Estúdio Digital Bocca
   </p>
 </div>
 
@@ -78,7 +78,7 @@ npm run md
 - Vitest (coverage, UI, Vue Test Utils)
 - Vue Router
 - Pinia
-- Tailwind CSS
+- Tailwind CSS v4
 - sass
 - eslint
 - Vite Vue devtools

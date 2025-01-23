@@ -53,7 +53,7 @@ handleVariantClass()
 
 <template>
   <button
-    class="custom-button rounded text-white hover:cursor-pointer py-2 px-4 flex items-center justify-center"
+    class="custom-button rounded-sm text-white hover:cursor-pointer py-2 px-4 flex items-center justify-center"
     :class="`${buttonVariantClass} ${buttonIconPositionClass}`"
     :disabled="disabled"
     @click="$emit('clicked')"
