@@ -79,6 +79,7 @@ npm run md
 - Vue Router
 - Pinia
 - Tailwind CSS v4
+- tailwindcss-animated
 - sass
 - eslint
 - Vite Vue devtools
@@ -91,3 +92,5 @@ npm run md
 - neoconfetti
 - husky
 - @number-flow/vue
+- apexcharts
+- uuid
