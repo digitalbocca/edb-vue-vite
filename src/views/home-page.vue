@@ -9,6 +9,7 @@ import Clock from '@/components/clock.vue'
 import Counter from '@/components/counter.vue'
 import Potatoes from '@/components/potatoes.vue'
 import FormInputs from '@/components/form-inputs.vue'
+import Charts from '@/components/charts.vue'
 import { DEFAULT_ENV_TEXT } from '@/constants'
 
 const envExample = import.meta.env.VITE_ENV_EXAMPLE ?? ''
@@ -38,6 +39,9 @@ const toggleConfetti = () => {
     />
     <FormInputs
       title="Campos de formulário"
+    />
+    <Charts
+      title="Gráficos"
     />
 
     <div

@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
 import { createNotivue } from 'notivue'
+import VueApexCharts from 'vue3-apexcharts'
 
 import App from '@/app.vue'
 import router from '@/router'
@@ -25,5 +26,6 @@ app.use(router)
 app.use(store)
 app.use(autoAnimatePlugin)
 app.use(notivue)
+app.use(VueApexCharts)
 
 app.mount('#app')
