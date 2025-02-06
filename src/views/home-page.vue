@@ -31,7 +31,7 @@ const toggleConfetti = () => {
     class="flex flex-col container mx-auto"
   >
     <Clock title="Horário" />
-    <Counter title="Animação em números" />
+    <Counter title="Números animados" />
     <Potatoes title="Animação em itens" />
     <Buttons
       title="Botões"

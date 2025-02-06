@@ -94,3 +94,4 @@ npm run md
 - @number-flow/vue
 - apexcharts
 - uuid
+- z-vue-scan
