@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import Button from '@/components/base/button'
+
+import Button from '@/components/base/custom-button'
 
 describe('Button component', () => {
   it('Default primary button is created when variant prop is not set', () => {

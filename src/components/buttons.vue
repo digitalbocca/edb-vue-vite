@@ -2,7 +2,7 @@
 
 import { IconHandFinger, IconMoodKidFilled } from '@tabler/icons-vue'
 
-import Button from '@/components/base/button'
+import Button from '@/components/base/custom-button'
 import ContainerCard from '@/components/container-card.vue'
 import LeadBlock from '@/components/lead-block.vue'
 
