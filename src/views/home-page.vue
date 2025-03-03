@@ -44,10 +44,7 @@ const toggleConfetti = () => {
       title="Gráficos"
     />
 
-    <div
-      style=""
-      class="flex flex-row justify-center"
-    >
+    <div class="flex flex-row justify-center">
       <div
         v-if="showConfetti"
         v-confetti
