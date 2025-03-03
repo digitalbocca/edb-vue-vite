@@ -1,7 +1,7 @@
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    id="svg2"
+    id="fried-potato"
     viewBox="0 0 323.82 477.74"
     version="1.1"
   >
@@ -17,8 +17,8 @@
       >
         <path
           id="path3876"
+          class="brown"
           d="m101 310.31 60-29 32 49-52 5-33-13-7-12z"
-          style="fill:#501616"
           transform="translate(0 372.05)"
         />
         <g
@@ -27,8 +27,8 @@
         >
           <path
             id="path2816-5"
+            class="yellow"
             sodipodi:nodetypes="ccccc"
-            style="fill:#ffcc00"
             transform="translate(0 570.47)"
             d="m166.5 116.89c12.955 53.055 22.45 122.63 19.5 234l43-5c-3.4814-78.389-4.6271-153.27-13-239-17.099 0.93667-35.474 2.2709-49.5 10z"
           />
@@ -52,7 +52,7 @@
           <path
             id="path2816"
             sodipodi:nodetypes="ccccc"
-            style="fill:#ffcc00"
+            class="yellow"
             transform="translate(0 570.47)"
             d="m166.5 116.89c12.955 53.055 22.45 122.63 19.5 234l43-5c-3.4814-78.389-4.6271-153.27-13-239-17.099 0.93667-35.474 2.2709-49.5 10z"
           />
@@ -76,7 +76,7 @@
           <path
             id="path2816-7"
             sodipodi:nodetypes="ccccc"
-            style="fill:#ffcc00"
+            class="yellow"
             transform="translate(0 570.47)"
             d="m166.5 116.89c12.955 53.055 22.45 122.63 19.5 234l43-5c-3.4814-78.389-4.6271-153.27-13-239-17.099 0.93667-35.474 2.2709-49.5 10z"
           />
@@ -100,7 +100,7 @@
           <path
             id="path2816-1"
             sodipodi:nodetypes="ccccc"
-            style="fill:#ffcc00"
+            class="yellow"
             transform="translate(0 570.47)"
             d="m166.5 116.89c12.955 53.055 22.45 122.63 19.5 234l43-5c-3.4814-78.389-4.6271-153.27-13-239-17.099 0.93667-35.474 2.2709-49.5 10z"
           />
@@ -124,7 +124,7 @@
           <path
             id="path2816-0"
             sodipodi:nodetypes="ccccc"
-            style="fill:#ffcc00"
+            class="yellow"
             transform="translate(0 570.47)"
             d="m166.5 116.89c12.955 53.055 22.45 122.63 19.5 234l43-5c-3.4814-78.389-4.6271-153.27-13-239-17.099 0.93667-35.474 2.2709-49.5 10z"
           />
@@ -148,7 +148,7 @@
           <path
             id="path2816-8"
             sodipodi:nodetypes="ccccc"
-            style="fill:#ffcc00"
+            class="yellow"
             transform="translate(0 570.47)"
             d="m166.5 116.89c12.955 53.055 22.45 122.63 19.5 234l43-5c-3.4814-78.389-4.6271-153.27-13-239-17.099 0.93667-35.474 2.2709-49.5 10z"
           />
@@ -172,7 +172,7 @@
           <path
             id="path2816-6"
             sodipodi:nodetypes="ccccc"
-            style="fill:#ffcc00"
+            class="yellow"
             transform="translate(0 570.47)"
             d="m166.5 116.89c12.955 53.055 22.45 122.63 19.5 234l43-5c-3.4814-78.389-4.6271-153.27-13-239-17.099 0.93667-35.474 2.2709-49.5 10z"
           />
@@ -196,7 +196,7 @@
           <path
             id="path2816-2"
             sodipodi:nodetypes="ccccc"
-            style="fill:#ffcc00"
+            class="yellow"
             transform="translate(0 570.47)"
             d="m166.5 116.89c12.955 53.055 22.45 122.63 19.5 234l43-5c-3.4814-78.389-4.6271-153.27-13-239-17.099 0.93667-35.474 2.2709-49.5 10z"
           />
@@ -220,7 +220,7 @@
           <path
             id="path2816-08"
             sodipodi:nodetypes="ccccc"
-            style="fill:#ffcc00"
+            class="yellow"
             transform="translate(0 570.47)"
             d="m166.5 116.89c12.955 53.055 22.45 122.63 19.5 234l43-5c-3.4814-78.389-4.6271-153.27-13-239-17.099 0.93667-35.474 2.2709-49.5 10z"
           />
@@ -244,7 +244,7 @@
           <path
             id="path2816-4"
             sodipodi:nodetypes="ccccc"
-            style="fill:#ffcc00"
+            class="yellow"
             transform="translate(0 570.47)"
             d="m166.5 116.89c12.955 53.055 22.45 122.63 19.5 234l43-5c-3.4814-78.389-4.6271-153.27-13-239-17.099 0.93667-35.474 2.2709-49.5 10z"
           />
@@ -278,3 +278,15 @@
     </g>
   </svg>
 </template>
+
+<style lang="css" scoped>
+
+.brown {
+  fill: #501616
+}
+
+.yellow {
+  fill:#ffcc00
+}
+
+</style>
