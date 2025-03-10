@@ -45,7 +45,7 @@
   "dependencies": {
     "@formkit/auto-animate": "^0.8.2",
     "@neoconfetti/vue": "^2.2.1",
-    "@number-flow/vue": "^0.4.3",
+    "@number-flow/vue": "^0.4.5",
     "@tabler/icons-vue": "^3.30.0",
     "@vueuse/core": "^12.7.0",
     "apexcharts": "^4.5.0",
