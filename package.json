@@ -47,7 +47,7 @@
     "@neoconfetti/vue": "^2.2.1",
     "@number-flow/vue": "^0.4.3",
     "@tabler/icons-vue": "^3.30.0",
-    "@vueuse/core": "^12.7.0",
+    "@vueuse/core": "^13.0.0",
     "apexcharts": "^4.5.0",
     "axios": "^1.8.1",
     "notivue": "^2.4.5",
