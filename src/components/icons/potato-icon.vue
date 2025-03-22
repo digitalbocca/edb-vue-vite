@@ -41,7 +41,7 @@
           <path
             id="path3612-2"
             sodipodi:nodetypes="ccc"
-            style="fill:#d3bc5f"
+            class="gold"
             d="m134 700.36c21.126-18.502 49.298-25.029 82.5-22.433-27.5 1.3797-55 8.5341-82.5 22.433z"
           />
         </g>
@@ -65,7 +65,7 @@
           <path
             id="path3612"
             sodipodi:nodetypes="ccc"
-            style="fill:#d3bc5f"
+            class="gold"
             d="m134 700.36c21.126-18.502 49.298-25.029 82.5-22.433-27.5 1.3797-55 8.5341-82.5 22.433z"
           />
         </g>
@@ -89,7 +89,7 @@
           <path
             id="path3612-5"
             sodipodi:nodetypes="ccc"
-            style="fill:#d3bc5f"
+            class="gold"
             d="m134 700.36c21.126-18.502 49.298-25.029 82.5-22.433-27.5 1.3797-55 8.5341-82.5 22.433z"
           />
         </g>
@@ -113,7 +113,7 @@
           <path
             id="path3612-8"
             sodipodi:nodetypes="ccc"
-            style="fill:#d3bc5f"
+            class="gold"
             d="m134 700.36c21.126-18.502 49.298-25.029 82.5-22.433-27.5 1.3797-55 8.5341-82.5 22.433z"
           />
         </g>
@@ -137,7 +137,7 @@
           <path
             id="path3612-1"
             sodipodi:nodetypes="ccc"
-            style="fill:#d3bc5f"
+            class="gold"
             d="m134 700.36c21.126-18.502 49.298-25.029 82.5-22.433-27.5 1.3797-55 8.5341-82.5 22.433z"
           />
         </g>
@@ -161,7 +161,7 @@
           <path
             id="path3612-6"
             sodipodi:nodetypes="ccc"
-            style="fill:#d3bc5f"
+            class="gold"
             d="m134 700.36c21.126-18.502 49.298-25.029 82.5-22.433-27.5 1.3797-55 8.5341-82.5 22.433z"
           />
         </g>
@@ -185,7 +185,7 @@
           <path
             id="path3612-0"
             sodipodi:nodetypes="ccc"
-            style="fill:#d3bc5f"
+            class="gold"
             d="m134 700.36c21.126-18.502 49.298-25.029 82.5-22.433-27.5 1.3797-55 8.5341-82.5 22.433z"
           />
         </g>
@@ -209,7 +209,7 @@
           <path
             id="path3612-06"
             sodipodi:nodetypes="ccc"
-            style="fill:#d3bc5f"
+            class="gold"
             d="m134 700.36c21.126-18.502 49.298-25.029 82.5-22.433-27.5 1.3797-55 8.5341-82.5 22.433z"
           />
         </g>
@@ -233,7 +233,7 @@
           <path
             id="path3612-3"
             sodipodi:nodetypes="ccc"
-            style="fill:#d3bc5f"
+            class="gold"
             d="m134 700.36c21.126-18.502 49.298-25.029 82.5-22.433-27.5 1.3797-55 8.5341-82.5 22.433z"
           />
         </g>
@@ -257,7 +257,7 @@
           <path
             id="path3612-39"
             sodipodi:nodetypes="ccc"
-            style="fill:#d3bc5f"
+            class="gold"
             d="m134 700.36c21.126-18.502 49.298-25.029 82.5-22.433-27.5 1.3797-55 8.5341-82.5 22.433z"
           />
         </g>
@@ -287,6 +287,10 @@
 
 .yellow {
   fill:#ffcc00
+}
+
+.gold {
+  fill: #d3bc5f
 }
 
 </style>
