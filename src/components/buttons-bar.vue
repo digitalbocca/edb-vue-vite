@@ -6,7 +6,16 @@ import Button from '@/components/base/custom-button'
 import ContainerCard from '@/components/container-card.vue'
 import LeadBlock from '@/components/lead-block.vue'
 
-defineProps(['title', 'subtitle'])
+defineProps({
+  title: {
+    type: String,
+    default: 'Buttons'
+  },
+  subtitle: {
+    type: String,
+    default: 'Buttons with icons'
+  }
+})
 
 </script>
 
