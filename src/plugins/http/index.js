@@ -12,7 +12,7 @@ const successResponseInterceptor = res => res
 /**
  * Interceptador de resposta
  * @param {Object} res Resposta da requisição
- * 
+ *
  * @example Exemplo de interceptador de resposta
  *
  * if (res.response.status === 401) {
@@ -27,7 +27,7 @@ const errorResponseInterceptor = res => {
 /**
  * Interceptador de request
  * @param {Object} req Requisição
- * 
+ *
  * @example Exemplo de interceptador de request
  *
  * req.headers = {

@@ -4,7 +4,7 @@ import { FlatCompat } from '@eslint/eslintrc'
 import vue from 'eslint-plugin-vue'
 import globals from 'globals'
 import * as depend from 'eslint-plugin-depend'
-import eslintPluginImportX from 'eslint-plugin-import-x'
+import { flatConfigs } from 'eslint-plugin-import-x'
 
 export default [
   depend.configs['flat/recommended'],
@@ -12,7 +12,7 @@ export default [
   ...(new FlatCompat({
     baseDirectory: path.dirname(url.fileURLToPath(import.meta.url))
   }).extends('eslint-config-standard')),
-  eslintPluginImportX.flatConfigs.recommended,
+  flatConfigs.recommended,
   {
     languageOptions: {
       ecmaVersion: 2022,
@@ -24,6 +24,13 @@ export default [
     plugins: {
       vue
     },
+    settings: {
+      'import-x/resolver': {
+        node: {
+          extensions: ['.js', '.jsx', '.vue', '.ts', '.tsx', '.css', '.sass', '.scss', '.mjs']
+        }
+      }
+    },
     rules: {
       'import-x/order': ['error', {
         groups: [['builtin', 'external', 'internal']],
@@ -32,9 +39,9 @@ export default [
       'import-x/no-duplicates': 'error',
       'import-x/no-self-import': 'error',
       'import-x/no-unresolved': ['error', {
-        // ignore: ['^@/']
         ignore: [
-          '^@/'
+          '^@/',
+          '\\.css$'
         ]
       }],
       'vue/max-attributes-per-line': ['error', {
