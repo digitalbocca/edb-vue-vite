@@ -4,7 +4,7 @@ import { computed, ref } from 'vue'
 import { vConfetti } from '@neoconfetti/vue'
 import { IconBalloon } from '@tabler/icons-vue'
 
-import Buttons from '@/components/buttons.vue'
+import ButtonsBar from '@/components/buttons-bar.vue'
 import Clock from '@/components/clock.vue'
 import Counter from '@/components/counter.vue'
 import Potatoes from '@/components/potatoes.vue'
@@ -33,7 +33,7 @@ const toggleConfetti = () => {
     <Clock title="Horário" />
     <Counter title="Números animados" />
     <Potatoes title="Animação em itens" />
-    <Buttons
+    <ButtonsBar
       title="Botões"
       subtitle="Icon Buttons"
     />
