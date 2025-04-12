@@ -10,7 +10,12 @@ import ContainerCard from '@/components/container-card.vue'
 import PotatoIcon from '@/components/icons/potato-icon.vue'
 import LeadBlock from '@/components/lead-block.vue'
 
-defineProps(['title'])
+defineProps({
+  title: {
+    type: String,
+    default: 'Fritando batatinhas'
+  }
+})
 
 const potatoes = ref([])
 

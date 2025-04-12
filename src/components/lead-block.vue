@@ -1,6 +1,11 @@
 <script setup>
 
-defineProps(['title'])
+defineProps({
+  title: {
+    type: String,
+    default: 'Título'
+  }
+})
 
 </script>
 

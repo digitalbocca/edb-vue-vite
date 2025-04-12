@@ -7,7 +7,12 @@ import ContainerCard from '@/components/container-card.vue'
 import BaseTextInput from '@/components/base/input/text-input'
 import LeadBlock from '@/components/lead-block.vue'
 
-defineProps(['title'])
+defineProps({
+  title: {
+    type: String,
+    default: 'Campos de formulário'
+  }
+})
 
 const inputRef = ref('')
 

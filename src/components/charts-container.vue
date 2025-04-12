@@ -5,7 +5,12 @@ import { IconChartPie } from '@tabler/icons-vue'
 import ContainerCard from '@/components/container-card.vue'
 import LeadBlock from '@/components/lead-block.vue'
 
-defineProps(['title'])
+defineProps({
+  title: {
+    type: String,
+    default: 'Gráficos'
+  }
+})
 
 </script>
 
@@ -31,16 +36,44 @@ defineProps(['title'])
             type="line"
             :options="{
               chart: {
-                id: 'basic-line'
+                id: 'primeiro-trimestre',
+                toolbar: {
+                  show: false
+                }
               },
               xaxis: {
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
+                categories: [
+                  'Janeiro',
+                  'Fevereiro',
+                  'Março'
+                ]
+              },
+              colors: [
+                '#3498db'
+              ],
+              stroke: {
+                curve: 'smooth'
+              },
+              markers: {
+                size: 5,
+                colors: ['#2980b9'],
+                strokeColors: '#fff',
+                strokeWidth: 2,
+                hover: {
+                  size: 7
+                }
+              },
+              grid: {
+                borderColor: '#e0e0e0'
+              },
+              tooltip: {
+                theme: 'dark'
               }
             }"
             :series="[
               {
-                name: 'series-1',
-                data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
+                name: 'Vendas',
+                data: [30, 40, 35]
               }
             ]"
             width="100%"
@@ -50,16 +83,25 @@ defineProps(['title'])
             type="bar"
             :options="{
               chart: {
-                id: 'basic-bar'
+                id: 'primeiro-semestre'
               },
               xaxis: {
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
+                categories: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun']
+              },
+              colors: [
+                '#3498db'
+              ],
+              grid: {
+                borderColor: '#e0e0e0'
+              },
+              tooltip: {
+                theme: 'dark'
               }
             }"
             :series="[
               {
-                name: 'series-1',
-                data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
+                name: 'Assinaturas',
+                data: [30, 40, 35, 50, 49, 60]
               }
             ]"
             width="100%"
@@ -69,9 +111,15 @@ defineProps(['title'])
             type="pie"
             :options="{
               chart: {
-                id: 'basic-pie'
+                id: 'entregas'
               },
-              labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
+              labels: [
+                'Features',
+                'Bugfixes',
+                'Tech Debt',
+                'Refactor',
+                'Improve'
+              ],
               responsive: [
                 {
                   breakpoint: 480,
@@ -84,7 +132,20 @@ defineProps(['title'])
                     }
                   }
                 }
-              ]
+              ],
+              colors: [
+                '#2ecc71',
+                '#e74c3c',
+                '#3498db',
+                '#34495e',
+                '#e67e22',
+              ],
+              grid: {
+                borderColor: '#e0e0e0'
+              },
+              tooltip: {
+                theme: 'dark'
+              }
             }"
             :series="[44, 55, 13, 43, 22]"
             width="100%"
@@ -94,7 +155,7 @@ defineProps(['title'])
             type="donut"
             :options="{
               chart: {
-                id: 'basic-donut'
+                id: 'throughput'
               },
               labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
               responsive: [
@@ -109,7 +170,20 @@ defineProps(['title'])
                     }
                   }
                 }
-              ]
+              ],
+              colors: [
+                '#2ecc71',
+                '#e74c3c',
+                '#3498db',
+                '#34495e',
+                '#e67e22',
+              ],
+              grid: {
+                borderColor: '#e0e0e0'
+              },
+              tooltip: {
+                theme: 'dark'
+              }
             }"
             :series="[44, 55, 13, 43, 22]"
             width="100%"
