@@ -8,7 +8,12 @@ import LeadBlock from '@/components/lead-block.vue'
 
 const formatted = useDateFormat(useNow(), 'HH:mm:ss', { locales: 'pt-BR' })
 
-defineProps(['title'])
+defineProps({
+  title: {
+    type: String,
+    default: 'Relógio'
+  }
+})
 
 </script>
 

@@ -5,11 +5,11 @@ import { vConfetti } from '@neoconfetti/vue'
 import { IconBalloon } from '@tabler/icons-vue'
 
 import ButtonsBar from '@/components/buttons-bar.vue'
-import Clock from '@/components/clock.vue'
-import Counter from '@/components/counter.vue'
-import Potatoes from '@/components/potatoes.vue'
+import ClockBar from '@/components/clock-bar.vue'
+import CounterWrapper from '@/components/counter-wrapper.vue'
+import PotatoesKitchen from '@/components/potatoes-kitchen.vue'
 import FormInputs from '@/components/form-inputs.vue'
-import Charts from '@/components/charts.vue'
+import ChartsContainer from '@/components/charts-container.vue'
 import { DEFAULT_ENV_TEXT } from '@/constants'
 
 const envExample = import.meta.env.VITE_ENV_EXAMPLE ?? ''
@@ -30,9 +30,9 @@ const toggleConfetti = () => {
   <div
     class="flex flex-col container mx-auto"
   >
-    <Clock title="Horário" />
-    <Counter title="Números animados" />
-    <Potatoes title="Animação em itens" />
+    <ClockBar title="Horário" />
+    <CounterWrapper title="Números animados" />
+    <PotatoesKitchen title="Animação em itens" />
     <ButtonsBar
       title="Botões"
       subtitle="Icon Buttons"
@@ -40,7 +40,7 @@ const toggleConfetti = () => {
     <FormInputs
       title="Campos de formulário"
     />
-    <Charts
+    <ChartsContainer
       title="Gráficos"
     />
 

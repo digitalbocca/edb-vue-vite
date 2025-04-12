@@ -13,7 +13,12 @@ import { useSampleStore } from '@/stores/sample'
 
 const sampleStore = useSampleStore()
 
-defineProps(['title'])
+defineProps({
+  title: {
+    type: String,
+    default: 'Contador'
+  }
+})
 
 const startValue = ref(0)
 
