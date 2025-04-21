@@ -51,7 +51,7 @@
     "@number-flow/vue": "^0.4.7",
     "@tabler/icons-vue": "^3.31.0",
     "@vueuse/core": "^13.1.0",
-    "apexcharts": "^4.5.0",
+    "apexcharts": "^4.6.0",
     "axios": "^1.8.4",
     "notivue": "^2.4.5",
     "pinia": "^3.0.2",
