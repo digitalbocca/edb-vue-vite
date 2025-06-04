@@ -9,7 +9,7 @@ applyTo: "**"
 - Use nomes consistentes em todo o projeto
 - Use camelCase para variáveis e funções, PascalCase para classes e constantes em maiúsculas com sublinhados
 - Use nomes de arquivos que reflitam o conteúdo do módulo ou componente
-
+- Para componentes Vue, use kebab-case em nomes de arquivos (ex: `meu-componente.vue`)
 ## Estrutura do Código
 - Mantenha o código organizado em módulos ou pacotes lógicos
 - Separe o código em funções ou métodos pequenos e coesos
