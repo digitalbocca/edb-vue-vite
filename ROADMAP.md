@@ -25,6 +25,7 @@ The project is a Vue 3 and Vite based template with a solid foundation, includin
 
 ## Contribution Guidelines
 We welcome contributions to the edb-vue-vite project! If you'd like to contribute, please follow these guidelines:
+0. **Discuss First:** Before starting on a new feature or significant change, please check existing issues or open a new one to discuss your proposal. This helps align efforts with project goals.
 1. Fork the repository.
 2. Create a new branch for your feature or bug fix.
 3. Make your changes, ensuring they align with the project's coding style and best practices.
