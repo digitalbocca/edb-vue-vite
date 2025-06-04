@@ -28,6 +28,6 @@ We welcome contributions to the edb-vue-vite project! If you'd like to contribut
 0. **Discuss First:** Before starting on a new feature or significant change, please check existing issues or open a new one to discuss your proposal. This helps align efforts with project goals.
 1. Fork the repository.
 2. Create a new branch for your feature or bug fix.
-3. Make your changes, ensuring they align with the project's coding style and best practices.
+3. Make your changes, ensuring they align with the project's coding style (e.g., as defined in `eslint.config.js`) and best practices.
 4. Write unit tests for any new functionality or bug fixes.
 5. Submit a pull request with a clear description of your changes.
