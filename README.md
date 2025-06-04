@@ -133,7 +133,9 @@ src/
 │   │   └── input/
 │   └── icons/          # Ícones SVG customizados
 ├── constants/          # Constantes da aplicação
-├── plugins/           # Plugins e configurações
+│   └── http/          # Cliente HTTP (Axios)
+├── plugins/           # Configuração de plugins Vue, cliente HTTP, etc.
+├── router/            # Configuração de rotas
 │   └── http/          # Cliente HTTP (Axios)
 ├── router/            # Configuração de rotas
 ├── stores/            # Gerenciamento de estado (Pinia)
