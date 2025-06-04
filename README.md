@@ -268,8 +268,8 @@ const response = await http.get('/endpoint')
 ## 🔍 BOAS PRÁTICAS
 
 ### Nomenclatura
-- **Componentes**: PascalCase (`MyComponent.vue`)
-- **Arquivos**: kebab-case (`my-component.vue`)
+- **Nomes de Componentes (em `<script>` e `<template>`):** PascalCase (ex: `MyComponent`)
+- **Nomes de Arquivos de Componentes (`.vue`):** kebab-case (ex: `my-component.vue`)
 - **Variáveis**: camelCase (`myVariable`)
 - **Constantes**: UPPER_SNAKE_CASE (`MY_CONSTANT`)
 
