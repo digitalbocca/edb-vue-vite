@@ -199,7 +199,7 @@ describe('Button component', () => {
 ## 🛠️ FERRAMENTAS CONFIGURADAS
 
 ### Build & Development
-- **Vite**: Build tool ultrarrápido
+- **Vite com Rolldown**: Build tool ultrarrápido com bundler Rust-based para máxima performance
 - **Vue 3**: Framework progressivo
 - **Vue Router**: Roteamento SPA
 - **Pinia**: Gerenciamento de estado
@@ -227,80 +227,30 @@ describe('Button component', () => {
 - **Tabler Icons**: Biblioteca de ícones
 - **Notivue**: Sistema de notificações
 
-## 📚 GUIAS DE USO
+## 🚀 PERFORMANCE E OTIMIZAÇÕES
 
-### Criando um Novo Componente
-1. Crie o arquivo na pasta `src/components/`
-2. Use a composition API (`<script setup>`)
-3. Adicione testes em arquivo `.test.js`
-4. Documente props com JSDoc se necessário
+### Rolldown Bundler
+Este projeto utiliza o **Rolldown**, um bundler escrito em Rust que oferece:
 
-### Adicionando Nova Rota
-```javascript
-// src/router/routes.js
-export default [
-  {
-    path: '/nova-rota',
-    component: () => import('@/views/nova-pagina.vue'),
-    name: 'NovaPagina'
+- **Build mais rápido**: Até 10x mais rápido que bundlers tradicionais
+- **Hot Module Replacement (HMR) otimizado**: Atualizações instantâneas durante desenvolvimento
+- **Tree-shaking aprimorado**: Eliminação mais eficiente de código não utilizado
+- **Compatibilidade com Vite**: Totalmente compatível com o ecossistema Vite
+
+### Configuração do Rolldown
+O Rolldown é configurado através do override no package.json:
+```json
+{
+  "overrides": {
+    "vite": "npm:rolldown-vite@latest"
   }
-]
+}
 ```
 
-### Usando o Store (Pinia)
-```javascript
-// Em um componente
-import { useSampleStore } from '@/stores/sample'
-
-const store = useSampleStore()
-store.increment(5)
-console.log(store.getCounter)
-```
-
-### Fazendo Requisições HTTP
-```javascript
-// src/plugins/http/index.js já configurado
-import http from '@/plugins/http'
-
-const response = await http.get('/endpoint')
-```
-
-## 🔍 BOAS PRÁTICAS
-
-### Nomenclatura
-- **Nomes de Componentes (em `<script>` e `<template>`):** PascalCase (ex: `MyComponent`)
-- **Nomes de Arquivos de Componentes (`.vue`):** kebab-case (ex: `my-component.vue`)
-- **Variáveis**: camelCase (`myVariable`)
-- **Constantes**: UPPER_SNAKE_CASE (`MY_CONSTANT`)
-
-### Estrutura de Componentes
-```vue
-<script setup>
-// Imports
-// Props/Emits
-// Composables
-// Reactive data
-// Computed
-// Methods
-// Lifecycle hooks
-</script>
-
-<template>
-  <!-- Template -->
-</template>
-
-<style lang="sass" scoped>
-// Estilos
-</style>
-```
-
-### Commits
-O projeto usa Husky para executar testes antes do push:
-```bash
-git add .
-git commit -m "feat: adiciona novo componente"
-git push # Executa testes automaticamente
-```
+### Benefícios de Performance
+- **Desenvolvimento**: Início do servidor de desenvolvimento mais rápido
+- **Build de Produção**: Tempo de build reduzido significativamente
+- **Bundle Size**: Otimizações avançadas resultam em bundles menores
 
 ## 🚀 DEPLOY
 
@@ -309,7 +259,13 @@ git push # Executa testes automaticamente
 npm run build
 ```
 
+O build utiliza o Rolldown bundler para máxima performance e otimização.
 Os arquivos de produção ficam na pasta `dist/`
+
+### Vantagens do Build com Rolldown
+- **Velocidade**: Build de produção até 10x mais rápido
+- **Otimização**: Tree-shaking e code splitting avançados
+- **Compatibilidade**: Totalmente compatível com todas as funcionalidades do Vite
 
 ### Variáveis de Ambiente
 Certifique-se de configurar as variáveis `VITE_*` no ambiente de produção.
