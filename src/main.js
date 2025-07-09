@@ -3,6 +3,7 @@ import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
 import { createNotivue } from 'notivue'
 import VueApexCharts from 'vue3-apexcharts'
 import VueScan from 'z-vue-scan'
+import veProgress from 'vue-ellipse-progress'
 
 import App from '@/app.vue'
 import router from '@/router'
@@ -29,5 +30,6 @@ app.use(autoAnimatePlugin)
 app.use(notivue)
 app.use(VueApexCharts)
 app.use(VueScan)
+app.use(veProgress)
 
 app.mount('#app')
