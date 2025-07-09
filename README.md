@@ -101,6 +101,12 @@ Este template inclui componentes demonstrando diferentes funcionalidades:
 - Gerenciamento de estado com Pinia
 - Notificações toast integradas
 
+### 📈 Barras de Progresso Circulares
+- Integração com `vue-ellipse-progress` para indicadores visuais
+- Animações suaves e configuráveis
+- Múltiplos estilos de progresso circular
+- Ideal para dashboards e métricas
+
 ### 🍟 Animações de Listas
 - Componente `PotatoesKitchen` demonstrando animações em listas
 - Utiliza `@formkit/auto-animate` para transições suaves
@@ -111,6 +117,7 @@ Este template inclui componentes demonstrando diferentes funcionalidades:
 - **Botões**: Variantes de cores, estados disabled, com ícones
 - **Campos de Formulário**: Input com label animado e validação visual
 - **Cards Containerizados**: Layout responsivo e consistente
+- **Barras de Progresso**: Indicadores visuais circulares e animados
 
 ### 📈 Gráficos Interativos
 - Integração com ApexCharts
@@ -122,6 +129,7 @@ Este template inclui componentes demonstrando diferentes funcionalidades:
 - Confetti animado com `@neoconfetti/vue`
 - Ícones do Tabler Icons
 - Animações CSS do Tailwind CSS Animated
+- Barras de progresso circulares animadas
 
 ## 🏗️ ARQUITETURA DO PROJETO
 
@@ -221,11 +229,12 @@ describe('Button component', () => {
 - **Vue DevTools**: Debugging no browser
 
 ### Libraries
-- **@vueuse/core**: Composables utilitários
-- **axios**: Cliente HTTP
-- **uuid**: Geração de IDs únicos
-- **Tabler Icons**: Biblioteca de ícones
-- **Notivue**: Sistema de notificações
+- **@vueuse/core v13.5.0**: Composables utilitários
+- **axios v1.10.0**: Cliente HTTP
+- **uuid v11.1.0**: Geração de IDs únicos
+- **Tabler Icons v3.34.0**: Biblioteca de ícones
+- **Notivue v2.4.5**: Sistema de notificações
+- **vue-ellipse-progress v2.2.0**: Barras de progresso circulares animadas
 
 ## 🚀 PERFORMANCE E OTIMIZAÇÕES
 
