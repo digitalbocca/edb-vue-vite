@@ -4,6 +4,9 @@
   "description": "A Vue 3 project with Vite",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": ">=24.3.0"
+  },
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
