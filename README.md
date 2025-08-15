@@ -60,24 +60,28 @@ cp sample.env .env
 ```
 
 Configure as seguintes variáveis:
+
 - `VITE_API_BASE_URL`: URL base da sua API (sem barra no final)
 - `VITE_ENV_EXAMPLE`: Texto de exemplo exibido na home
 
 ## 📦 COMANDOS DISPONÍVEIS
 
 ### Desenvolvimento
+
 ```bash
 npm run dev          # Inicia o servidor de desenvolvimento
 npm run build        # Gera build de produção
 ```
 
 ### Testes
+
 ```bash
 npm run test         # Executa os testes com interface gráfica
 npm run coverage     # Executa testes e gera relatório de cobertura
 ```
 
 ### Manutenção
+
 ```bash
 npm run update       # Verifica atualizações de dependências
 npm run upgrade      # Instala atualizações de dependências
@@ -90,11 +94,13 @@ npm run lint         # Executa linter ESLint
 Este template inclui componentes demonstrando diferentes funcionalidades:
 
 ### 🕒 Relógio em Tempo Real
+
 - Componente `ClockBar` com atualização automática
 - Utiliza `@vueuse/core` para formatação de data/hora
 - Formatação localizada em português brasileiro
 
 ### 📊 Contadores Animados
+
 - Componente `CounterWrapper` com duas bibliotecas de animação:
   - `vue-countup-v3`: Animações numéricas clássicas
   - `@number-flow/vue`: Animações numéricas modernas
@@ -102,30 +108,35 @@ Este template inclui componentes demonstrando diferentes funcionalidades:
 - Notificações toast integradas
 
 ### 📈 Barras de Progresso Circulares
+
 - Integração com `vue-ellipse-progress` para indicadores visuais
 - Animações suaves e configuráveis
 - Múltiplos estilos de progresso circular
 - Ideal para dashboards e métricas
 
 ### 🍟 Animações de Listas
+
 - Componente `PotatoesKitchen` demonstrando animações em listas
 - Utiliza `@formkit/auto-animate` para transições suaves
 - Ícones SVG customizados
 - Sistema de notificações integrado
 
 ### 🎛️ Componentes de Interface
+
 - **Botões**: Variantes de cores, estados disabled, com ícones
 - **Campos de Formulário**: Input com label animado e validação visual
 - **Cards Containerizados**: Layout responsivo e consistente
 - **Barras de Progresso**: Indicadores visuais circulares e animados
 
 ### 📈 Gráficos Interativos
+
 - Integração com ApexCharts
 - Tipos de gráficos: linha, barra, pizza e donut
 - Configurações responsivas
 - Temas customizados
 
 ### 🎉 Elementos Visuais
+
 - Confetti animado com `@neoconfetti/vue`
 - Ícones do Tabler Icons
 - Animações CSS do Tailwind CSS Animated
@@ -153,11 +164,13 @@ src/
 ## 🧪 TESTES
 
 ### Estrutura de Testes
+
 - **Unitários**: Para componentes individuais
 - **Cobertura**: Relatórios HTML gerados automaticamente
 - **UI**: Interface gráfica para execução de testes
 
 ### Executando Testes
+
 ```bash
 # Interface gráfica
 npm run test
@@ -169,6 +182,7 @@ npm run coverage
 Os relatórios de cobertura ficam em `./tests/unit/coverage/`
 
 ### Exemplo de Teste
+
 ```javascript
 // Teste do componente Button
 describe('Button component', () => {
@@ -183,6 +197,7 @@ describe('Button component', () => {
 ## 🎨 SISTEMA DE DESIGN
 
 ### Cores CSS Variables
+
 ```css
 :root {
   --primary-color: #3498db;
@@ -194,12 +209,14 @@ describe('Button component', () => {
 ```
 
 ### Tipografia
+
 - **Sans-serif**: Lato (corpo do texto)
 - **Serif**: Vollkorn (textos especiais)
 - **Monospace**: Courier Prime (código/números)
 - **Display**: Montserrat (títulos)
 
 ### Responsividade
+
 - Mobile-first approach
 - Breakpoints do Tailwind CSS
 - Componentes adaptáveis
@@ -207,28 +224,33 @@ describe('Button component', () => {
 ## 🛠️ FERRAMENTAS CONFIGURADAS
 
 ### Build & Development
+
 - **Vite com Rolldown**: Build tool ultrarrápido com bundler Rust-based para máxima performance
 - **Vue 3**: Framework progressivo
 - **Vue Router**: Roteamento SPA
 - **Pinia**: Gerenciamento de estado
 
 ### Styling
+
 - **Tailwind CSS v4**: Framework CSS utilitário
 - **Sass**: Pré-processador CSS
 - **tailwindcss-animated**: Animações prontas
 
 ### Testing
+
 - **Vitest**: Framework de testes
 - **Vue Test Utils**: Utilitários para testes Vue
 - **jsdom**: DOM virtual para testes
 - **@vitest/ui**: Interface gráfica para testes
 
 ### Code Quality
+
 - **ESLint**: Linter JavaScript/Vue
 - **Husky**: Git hooks
 - **Vue DevTools**: Debugging no browser
 
 ### Libraries
+
 - **@vueuse/core v13.5.0**: Composables utilitários
 - **axios v1.10.0**: Cliente HTTP
 - **uuid v11.1.0**: Geração de IDs únicos
@@ -239,6 +261,7 @@ describe('Button component', () => {
 ## 🚀 PERFORMANCE E OTIMIZAÇÕES
 
 ### Rolldown Bundler
+
 Este projeto utiliza o **Rolldown**, um bundler escrito em Rust que oferece:
 
 - **Build mais rápido**: Até 10x mais rápido que bundlers tradicionais
@@ -247,7 +270,9 @@ Este projeto utiliza o **Rolldown**, um bundler escrito em Rust que oferece:
 - **Compatibilidade com Vite**: Totalmente compatível com o ecossistema Vite
 
 ### Configuração do Rolldown
+
 O Rolldown é configurado através do override no package.json:
+
 ```json
 {
   "overrides": {
@@ -257,6 +282,7 @@ O Rolldown é configurado através do override no package.json:
 ```
 
 ### Benefícios de Performance
+
 - **Desenvolvimento**: Início do servidor de desenvolvimento mais rápido
 - **Build de Produção**: Tempo de build reduzido significativamente
 - **Bundle Size**: Otimizações avançadas resultam em bundles menores
@@ -264,6 +290,7 @@ O Rolldown é configurado através do override no package.json:
 ## 🚀 DEPLOY
 
 ### Build de Produção
+
 ```bash
 npm run build
 ```
@@ -272,11 +299,13 @@ O build utiliza o Rolldown bundler para máxima performance e otimização.
 Os arquivos de produção ficam na pasta `dist/`
 
 ### Vantagens do Build com Rolldown
+
 - **Velocidade**: Build de produção até 10x mais rápido
 - **Otimização**: Tree-shaking e code splitting avançados
 - **Compatibilidade**: Totalmente compatível com todas as funcionalidades do Vite
 
 ### Variáveis de Ambiente
+
 Certifique-se de configurar as variáveis `VITE_*` no ambiente de produção.
 
 ## 🤝 CONTRIBUIÇÃO
