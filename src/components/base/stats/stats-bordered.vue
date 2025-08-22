@@ -30,6 +30,7 @@ defineProps({
   >
     <div class="flex flex-col justify-center items-center grow">
       <h2 class="text-6xl font-extrabold font-serif">
+        <slot name="prefix" />
         <NumberFlow
           :value="bigNumber"
           :format="{ notation: 'compact' } /* Intl.NumberFormat options */"
@@ -50,40 +51,45 @@ defineProps({
 <style lang="sass" scoped>
 
 .primary
-  border-color: #3498db
+  border-color: var(--primary-color)
 
   &:hover
-    border-color: #2980b9
+    border-color: var(--primary-color-hover)
 
 .secondary
-  border-color: #34495e
+  border-color: var(--secondary-color)
 
   &:hover
-    border-color: #2c3e50
+    border-color: var(--secondary-color-hover)
 
 .success
-  border-color: #2ecc71
+  border-color: var(--success-color)
 
   &:hover
-    border-color: #27ae60
+    border-color: var(--success-color-hover)
 
 .warning
-  border-color: #e67e22
+  border-color: var(--warning-color)
 
   &:hover
-    border-color: #d35400
+    border-color: var(--warning-color-hover)
 
 .danger
-  border-color: #e74c3c
+  border-color: var(--danger-color)
 
   &:hover
-    border-color: #c0392b
+    border-color: var(--danger-color-hover)
 
 .stats-container
   min-width: 120px
-  height: clamp(150px, 150px, 150px)
+  height: 150px
   border-top-style: solid
   border-top-width: 2px
-  transition: border-color 0.2s ease
+  padding-top: 4px
+  transition: border-color 0.2s ease, border-top-width 0.2s ease, padding-top 0.2s ease
+
+  &:hover
+    border-top-width: 6px
+    padding-top: 0px
 
 </style>
