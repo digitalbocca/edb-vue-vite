@@ -6,6 +6,7 @@ import { IconBalloon } from '@tabler/icons-vue'
 
 import DotsBar from '@/components/dots-bar.vue'
 import ClockBar from '@/components/clock-bar.vue'
+import LabelsBar from '@/components/labels-bar.vue'
 import ButtonsBar from '@/components/buttons-bar.vue'
 import FormInputs from '@/components/form-inputs.vue'
 import CounterWrapper from '@/components/counter-wrapper.vue'
@@ -47,6 +48,10 @@ const toggleConfetti = () => {
 
     <DotsBar
       title="Badge Dots"
+    />
+
+    <LabelsBar
+      title="Badge Labels"
     />
 
     <FormInputs
