@@ -1,50 +1,48 @@
 <script setup>
 
+import { VARIANTS } from '@/constants'
+
 defineProps({
   variant: {
     type: String,
-    default: 'primary'
+    default: 'primary',
+    validator: (value) => {
+      return VARIANTS.includes(value)
+    }
   }
 })
 
 </script>
 
 <template>
-  <div class="dot-wrapper">
-    <div :class="`dot dot-${variant}`" />
-  </div>
+  <div :class="`dot dot-${variant}`" />
 </template>
 
 <style lang="sass" scoped>
 
 .dot
-  width: 100%
-  height: 100%
-  border-radius: 9999px
-
-.dot-wrapper
   width: 12px
   height: 12px
   border-radius: 9999px
   padding: 0
   margin: 0
 
-.dot-primary
-  background-color: var(--primary-color)
+  &-primary
+    background-color: var(--primary-color)
 
-.dot-secondary
-  background-color: var(--secondary-color)
+  &-secondary
+    background-color: var(--secondary-color)
 
-.dot-success
-  background-color: var(--success-color)
+  &-success
+    background-color: var(--success-color)
 
-.dot-warning
-  background-color: var(--warning-color)
+  &-warning
+    background-color: var(--warning-color)
 
-.dot-danger
-  background-color: var(--danger-color)
+  &-danger
+    background-color: var(--danger-color)
 
-.dot-disabled
-  background-color: var(--disabled-color)
+  &-disabled
+    background-color: var(--disabled-color)
 
 </style>

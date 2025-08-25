@@ -2,6 +2,7 @@
 
 import { IconLabelFilled } from '@tabler/icons-vue'
 
+import { VARIANTS } from '@/constants'
 import BadgeLabeled from '@/components/base/badges/labeled'
 import ContainerCard from '@/components/container-card.vue'
 import LeadBlock from '@/components/lead-block.vue'
@@ -28,28 +29,10 @@ defineProps({
 
       <div class="flex flex-row justify-center flex-wrap gap-4">
         <BadgeLabeled
-          variant="primary"
-          label="Primary"
-        />
-        <BadgeLabeled
-          variant="secondary"
-          label="Secondary"
-        />
-        <BadgeLabeled
-          variant="success"
-          label="Success"
-        />
-        <BadgeLabeled
-          variant="warning"
-          label="Warning"
-        />
-        <BadgeLabeled
-          variant="danger"
-          label="Danger"
-        />
-        <BadgeLabeled
-          variant="disabled"
-          label="Disabled"
+          v-for="label in VARIANTS"
+          :key="label"
+          :variant="label"
+          :label="label"
         />
       </div>
     </ContainerCard>

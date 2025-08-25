@@ -1,9 +1,14 @@
 <script setup>
 
+import { VARIANTS } from '@/constants'
+
 defineProps({
   variant: {
     type: String,
-    default: 'primary'
+    default: 'primary',
+    validator: (value) => {
+      return VARIANTS.includes(value)
+    }
   },
   label: {
     type: String,
@@ -15,12 +20,10 @@ defineProps({
 
 <template>
   <div
-    class="badge-labeled py-1 px-4 flex justify-center items-center"
+    class="badge-labeled py-1 px-4 flex justify-center items-center text-white text-xs uppercase font-semibold"
     :class="`badge-labeled-${variant}`"
   >
-    <span class="flex h-full p-0 m-0 text-white text-xs uppercase">
-      {{ label }}
-    </span>
+    {{ label }}
   </div>
 </template>
 
@@ -28,7 +31,6 @@ defineProps({
 
 .badge-labeled
   border-radius: 9999px
-  font-weight: 700 !important
 
   &-primary
     background-color: var(--primary-color)
