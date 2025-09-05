@@ -1,6 +1,6 @@
 <script setup>
 
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 
 const props = defineProps({
   label: {
@@ -46,6 +46,10 @@ function handleVariantClass () {
 
   buttonVariant.value = displayVariantConditions ? variants[props.variant] : variants.primary
 }
+
+watch(() => props.variant, () => {
+  handleVariantClass()
+})
 
 handleVariantClass()
 
