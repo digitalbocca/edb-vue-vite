@@ -96,7 +96,7 @@ resume()
                 class="inline text-red-500"
               />
             </template>
-          </statsbordered>
+          </StatsBordered>
         </div>
       </div>
     </ContainerCard>
