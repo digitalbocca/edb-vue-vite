@@ -2,7 +2,7 @@
  * Array com as variantes de cores disponíveis para componentes
  * @type {string[]}
  */
-export default [
+export const VARIANTS = [
   'primary',
   'secondary',
   'success',

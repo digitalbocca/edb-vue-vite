@@ -1,4 +1,3 @@
-import { nextTick } from 'vue'
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 
@@ -132,14 +131,38 @@ describe('Button component', () => {
     expect(buttonClasses).toContain('flex-row-reverse')
   })
 
-  it('Atualiza a classe quando o prop "variant" muda após o mount', async () => {
+  it('Should change button variant when "variant" change', async () => {
     const wrapper = mount(Button, { props: { variant: 'primary' } })
-
     expect(wrapper.classes()).toContain('primary-button')
 
-    await wrapper.setProps({ variant: 'danger' })
-    await nextTick()
+    await wrapper.setProps({ variant: 'secondary' })
+    expect(wrapper.classes()).toContain('secondary-button')
 
+    await wrapper.setProps({ variant: 'danger' })
     expect(wrapper.classes()).toContain('danger-button')
+
+    await wrapper.setProps({ variant: 'success' })
+    expect(wrapper.classes()).toContain('success-button')
+
+    await wrapper.setProps({ variant: 'warning' })
+    expect(wrapper.classes()).toContain('warning-button')
+
+    await wrapper.setProps({ variant: 'batatinha' })
+    expect(wrapper.classes()).toContain('primary-button')
+  })
+
+  it('Should apply disabled state when "disabled" attibute is "true"', async () => {
+    const wrapper = mount(Button, { props: { disabled: true } })
+
+    expect(wrapper.attributes()).toHaveProperty('disabled')
+    expect(wrapper.classes()).toContain('primary-button')
+  })
+
+  it('Should handle disabled prop correctly', async () => {
+    const wrapper = mount(Button, { props: { variant: 'primary', disabled: false } })
+    expect(wrapper.attributes()).not.toHaveProperty('disabled')
+
+    await wrapper.setProps({ disabled: true })
+    expect(wrapper.attributes()).toHaveProperty('disabled')
   })
 })

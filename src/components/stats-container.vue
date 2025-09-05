@@ -44,9 +44,9 @@ const statsElements = ref([
 
 useIntervalFn(() => {
   statsElements.value.forEach((el) => {
-    el.bigNumber = Math.floor(Math.random() * MAX_STATS_BAR_PERCENT)
+    el.bigNumber = Math.floor(Math.random() * (MAX_STATS_BAR_PERCENT + 1))
   })
-}, STATS_BAR_TIMEOUT)
+}, STATS_BAR_TIMEOUT, { immediate: true })
 
 defineProps({
   title: {

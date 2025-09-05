@@ -25,7 +25,7 @@ const coloredButtonsVariant = ref(0)
 useIntervalFn(() => {
   const condition = coloredButtonsVariant.value >= VARIANTS.length - 1
   condition ? coloredButtonsVariant.value = 0 : coloredButtonsVariant.value++
-}, BUTTON_COLOR_CHANGE_TIMEOUT)
+}, BUTTON_COLOR_CHANGE_TIMEOUT, { immediate: true })
 
 </script>
 

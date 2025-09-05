@@ -10,20 +10,8 @@ import {
   DEFAULT_PROGRESS_BAR_PERCENT,
   MAX_PROGRESS_BAR_PERCENT,
   PROGRESS_BAR_TIMEOUT,
-  HEX_COLOR_PRIMARY,
-  HEX_COLOR_SECONDARY,
-  HEX_COLOR_SUCCESS,
-  HEX_COLOR_WARNING,
-  HEX_COLOR_DANGER
+  PROGRESS_COLORS
 } from '@/constants'
-
-const PROGRESS_COLORS = [
-  HEX_COLOR_PRIMARY,
-  HEX_COLOR_SECONDARY,
-  HEX_COLOR_SUCCESS,
-  HEX_COLOR_WARNING,
-  HEX_COLOR_DANGER
-]
 
 const progressElements = ref(
   PROGRESS_COLORS.map(color => ({
@@ -34,9 +22,9 @@ const progressElements = ref(
 
 useIntervalFn(() => {
   progressElements.value.forEach((el) => {
-    el.progress = Math.floor(Math.random() * MAX_PROGRESS_BAR_PERCENT)
+    el.progress = Math.floor(Math.random() * (MAX_PROGRESS_BAR_PERCENT + 1))
   })
-}, PROGRESS_BAR_TIMEOUT)
+}, PROGRESS_BAR_TIMEOUT, { immediate: true })
 
 defineProps({
   title: {

@@ -2,4 +2,4 @@
  * Texto padrão exibido quando há erro no carregamento das variáveis de ambiente
  * @type {string}
  */
-export default 'Há algum erro no carregamento do arquivo .env'
+export const DEFAULT_ENV_TEXT = 'Há algum erro no carregamento do arquivo .env'
