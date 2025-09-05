@@ -7,6 +7,7 @@ import { useIntervalFn } from '@vueuse/core'
 import ContainerCard from '@/components/container-card.vue'
 import LeadBlock from '@/components/lead-block.vue'
 import StatsBordered from '@/components/base/stats'
+import { MAX_STATS_BAR_PERCENT, STATS_BAR_TIMEOUT } from '@/constants'
 
 const statsElements = ref([
   {
@@ -41,11 +42,11 @@ const statsElements = ref([
   }
 ])
 
-const { resume } = useIntervalFn(() => {
+useIntervalFn(() => {
   statsElements.value.forEach((el) => {
-    el.bigNumber = Math.floor(Math.random() * 100)
+    el.bigNumber = Math.floor(Math.random() * MAX_STATS_BAR_PERCENT)
   })
-}, 5 * 1000)
+}, STATS_BAR_TIMEOUT)
 
 defineProps({
   title: {
@@ -53,8 +54,6 @@ defineProps({
     default: 'Stats'
   }
 })
-
-resume()
 
 </script>
 

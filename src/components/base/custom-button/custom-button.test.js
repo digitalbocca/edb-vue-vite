@@ -1,3 +1,4 @@
+import { nextTick } from 'vue'
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 
@@ -129,5 +130,16 @@ describe('Button component', () => {
     const buttonClasses = wrapper.classes()
 
     expect(buttonClasses).toContain('flex-row-reverse')
+  })
+
+  it('Atualiza a classe quando o prop "variant" muda após o mount', async () => {
+    const wrapper = mount(Button, { props: { variant: 'primary' } })
+
+    expect(wrapper.classes()).toContain('primary-button')
+
+    await wrapper.setProps({ variant: 'danger' })
+    await nextTick()
+
+    expect(wrapper.classes()).toContain('danger-button')
   })
 })

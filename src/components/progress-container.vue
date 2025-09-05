@@ -17,32 +17,24 @@ import {
   HEX_COLOR_DANGER
 } from '@/constants'
 
-const progressElements = ref([
-  {
-    progress: DEFAULT_PROGRESS_BAR_PERCENT,
-    color: HEX_COLOR_PRIMARY
-  },
-  {
-    progress: DEFAULT_PROGRESS_BAR_PERCENT,
-    color: HEX_COLOR_SECONDARY
-  },
-  {
-    progress: DEFAULT_PROGRESS_BAR_PERCENT,
-    color: HEX_COLOR_SUCCESS
-  },
-  {
-    progress: DEFAULT_PROGRESS_BAR_PERCENT,
-    color: HEX_COLOR_WARNING
-  },
-  {
-    progress: DEFAULT_PROGRESS_BAR_PERCENT,
-    color: HEX_COLOR_DANGER
-  }
-])
+const PROGRESS_COLORS = [
+  HEX_COLOR_PRIMARY,
+  HEX_COLOR_SECONDARY,
+  HEX_COLOR_SUCCESS,
+  HEX_COLOR_WARNING,
+  HEX_COLOR_DANGER
+]
 
-const { resume } = useIntervalFn(() => {
-  progressElements.value.forEach((_element, index) => {
-    progressElements.value[index].progress = (Math.floor(Math.random() * MAX_PROGRESS_BAR_PERCENT))
+const progressElements = ref(
+  PROGRESS_COLORS.map(color => ({
+    progress: DEFAULT_PROGRESS_BAR_PERCENT,
+    color
+  }))
+)
+
+useIntervalFn(() => {
+  progressElements.value.forEach((el) => {
+    el.progress = Math.floor(Math.random() * MAX_PROGRESS_BAR_PERCENT)
   })
 }, PROGRESS_BAR_TIMEOUT)
 
@@ -52,8 +44,6 @@ defineProps({
     default: 'Progress Container'
   }
 })
-
-resume()
 
 </script>
 

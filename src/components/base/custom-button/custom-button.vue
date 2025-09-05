@@ -47,11 +47,7 @@ function handleVariantClass () {
   buttonVariant.value = displayVariantConditions ? variants[props.variant] : variants.primary
 }
 
-watch(() => props.variant, () => {
-  handleVariantClass()
-})
-
-handleVariantClass()
+watch(() => props.variant, handleVariantClass, { immediate: true })
 
 </script>
 
