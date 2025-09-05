@@ -1,0 +1,5 @@
+export const HEX_COLOR_PRIMARY = '#3498db'
+export const HEX_COLOR_SECONDARY = '#34495e'
+export const HEX_COLOR_SUCCESS = '#2ecc71'
+export const HEX_COLOR_WARNING = '#e67e22'
+export const HEX_COLOR_DANGER = '#e74c3c'
