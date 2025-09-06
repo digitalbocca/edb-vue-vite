@@ -137,21 +137,26 @@ describe('Button component', () => {
 
     await wrapper.setProps({ variant: 'secondary' })
     expect(wrapper.classes()).toContain('secondary-button')
+    expect(wrapper.classes()).not.toContain('primary-button')
 
     await wrapper.setProps({ variant: 'danger' })
     expect(wrapper.classes()).toContain('danger-button')
+    expect(wrapper.classes()).not.toContain('secondary-button')
 
     await wrapper.setProps({ variant: 'success' })
     expect(wrapper.classes()).toContain('success-button')
+    expect(wrapper.classes()).not.toContain('danger-button')
 
     await wrapper.setProps({ variant: 'warning' })
     expect(wrapper.classes()).toContain('warning-button')
+    expect(wrapper.classes()).not.toContain('success-button')
 
     await wrapper.setProps({ variant: 'batatinha' })
     expect(wrapper.classes()).toContain('primary-button')
+    expect(wrapper.classes()).not.toContain('warning-button')
   })
 
-  it('Should apply disabled state when "disabled" attibute is "true"', async () => {
+  it('Should apply disabled state when "disabled" attribute is "true"', async () => {
     const wrapper = mount(Button, { props: { disabled: true } })
 
     expect(wrapper.attributes()).toHaveProperty('disabled')
