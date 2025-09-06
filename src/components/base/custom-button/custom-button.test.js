@@ -130,4 +130,44 @@ describe('Button component', () => {
 
     expect(buttonClasses).toContain('flex-row-reverse')
   })
+
+  it('Should change button variant when "variant" change', async () => {
+    const wrapper = mount(Button, { props: { variant: 'primary' } })
+    expect(wrapper.classes()).toContain('primary-button')
+
+    await wrapper.setProps({ variant: 'secondary' })
+    expect(wrapper.classes()).toContain('secondary-button')
+    expect(wrapper.classes()).not.toContain('primary-button')
+
+    await wrapper.setProps({ variant: 'danger' })
+    expect(wrapper.classes()).toContain('danger-button')
+    expect(wrapper.classes()).not.toContain('secondary-button')
+
+    await wrapper.setProps({ variant: 'success' })
+    expect(wrapper.classes()).toContain('success-button')
+    expect(wrapper.classes()).not.toContain('danger-button')
+
+    await wrapper.setProps({ variant: 'warning' })
+    expect(wrapper.classes()).toContain('warning-button')
+    expect(wrapper.classes()).not.toContain('success-button')
+
+    await wrapper.setProps({ variant: 'batatinha' })
+    expect(wrapper.classes()).toContain('primary-button')
+    expect(wrapper.classes()).not.toContain('warning-button')
+  })
+
+  it('Should apply disabled state when "disabled" attribute is "true"', async () => {
+    const wrapper = mount(Button, { props: { disabled: true } })
+
+    expect(wrapper.attributes()).toHaveProperty('disabled')
+    expect(wrapper.classes()).toContain('primary-button')
+  })
+
+  it('Should handle disabled prop correctly', async () => {
+    const wrapper = mount(Button, { props: { variant: 'primary', disabled: false } })
+    expect(wrapper.attributes()).not.toHaveProperty('disabled')
+
+    await wrapper.setProps({ disabled: true })
+    expect(wrapper.attributes()).toHaveProperty('disabled')
+  })
 })

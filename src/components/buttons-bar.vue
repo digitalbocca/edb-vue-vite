@@ -1,10 +1,13 @@
 <script setup>
 
+import { ref } from 'vue'
+import { useIntervalFn } from '@vueuse/core'
 import { IconHandFinger, IconMoodKidFilled } from '@tabler/icons-vue'
 
 import Button from '@/components/base/custom-button'
 import ContainerCard from '@/components/container-card.vue'
 import LeadBlock from '@/components/lead-block.vue'
+import { VARIANTS, BUTTON_COLOR_CHANGE_TIMEOUT } from '@/constants'
 
 defineProps({
   title: {
@@ -16,6 +19,13 @@ defineProps({
     default: 'Buttons with icons'
   }
 })
+
+const coloredButtonsVariant = ref(0)
+
+useIntervalFn(() => {
+  const condition = coloredButtonsVariant.value >= VARIANTS.length - 1
+  condition ? coloredButtonsVariant.value = 0 : coloredButtonsVariant.value++
+}, BUTTON_COLOR_CHANGE_TIMEOUT, { immediate: true })
 
 </script>
 
@@ -32,32 +42,16 @@ defineProps({
 
       <div class="flex flex-row justify-center flex-wrap gap-2">
         <Button
-          label="Primary"
+          v-for="variant in VARIANTS"
+          :key="variant"
+          :variant="variant"
+          :label="`${variant.charAt(0).toUpperCase()}${variant.slice(1)}`"
+          :disabled="variant === 'disabled'"
         />
-
         <Button
-          label="Secondary"
-          variant="secondary"
-        />
-
-        <Button
-          label="Success"
-          variant="success"
-        />
-
-        <Button
-          label="Warning"
-          variant="warning"
-        />
-
-        <Button
-          label="Danger"
-          variant="danger"
-        />
-
-        <Button
-          label="Disabled"
-          :disabled="true"
+          :variant="VARIANTS[coloredButtonsVariant]"
+          :label="'Changing Color'"
+          :disabled="VARIANTS[coloredButtonsVariant] === 'disabled'"
         />
       </div>
     </ContainerCard>

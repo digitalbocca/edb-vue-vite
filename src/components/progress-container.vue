@@ -6,20 +6,25 @@ import { useIntervalFn } from '@vueuse/core'
 
 import ContainerCard from '@/components/container-card.vue'
 import LeadBlock from '@/components/lead-block.vue'
+import {
+  DEFAULT_PROGRESS_BAR_PERCENT,
+  MAX_PROGRESS_BAR_PERCENT,
+  PROGRESS_BAR_TIMEOUT,
+  PROGRESS_COLORS
+} from '@/constants'
 
-const progressElements = ref([
-  { progress: 50, color: '#3498db' },
-  { progress: 50, color: '#34495e' },
-  { progress: 50, color: '#2ecc71' },
-  { progress: 50, color: '#e67e22' },
-  { progress: 50, color: '#e74c3c' }
-])
+const progressElements = ref(
+  PROGRESS_COLORS.map(color => ({
+    progress: DEFAULT_PROGRESS_BAR_PERCENT,
+    color
+  }))
+)
 
-const { resume } = useIntervalFn(() => {
-  progressElements.value.forEach((_element, index) => {
-    progressElements.value[index].progress = (Math.floor(Math.random() * 100))
+useIntervalFn(() => {
+  progressElements.value.forEach((el) => {
+    el.progress = Math.floor(Math.random() * (MAX_PROGRESS_BAR_PERCENT + 1))
   })
-}, 5 * 1000)
+}, PROGRESS_BAR_TIMEOUT, { immediate: true })
 
 defineProps({
   title: {
@@ -27,8 +32,6 @@ defineProps({
     default: 'Progress Container'
   }
 })
-
-resume()
 
 </script>
 
