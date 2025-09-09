@@ -61,11 +61,3 @@ defineProps({
     </div>
   </ContainerCard>
 </template>
-
-<style lang="sass" scoped>
-
-button
-  text-transform: uppercase
-  font-weight: 700
-
-</style>

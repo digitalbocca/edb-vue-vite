@@ -232,7 +232,7 @@ Este template inclui componentes demonstrando diferentes funcionalidades:
 
 ## 🏗️ ARQUITETURA DO PROJETO
 
-```
+```text
 src/
 ├── blocks/             # Componentes avançados e animações
 │   └── TextAnimations/ # Animações de texto
