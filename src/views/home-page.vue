@@ -4,6 +4,7 @@ import { computed, ref } from 'vue'
 import { vConfetti } from '@neoconfetti/vue'
 import { IconBalloon } from '@tabler/icons-vue'
 
+import TopBar from '@/components/top-bar.vue'
 import DotsBar from '@/components/dots-bar.vue'
 import ClockBar from '@/components/clock-bar.vue'
 import LabelsBar from '@/components/labels-bar.vue'
@@ -34,6 +35,10 @@ const toggleConfetti = () => {
   <div
     class="flex flex-col container mx-auto"
   >
+    <TopBar
+      title="Estúdio Digital Bocca"
+    />
+
     <ClockBar
       title="Horário"
     />
