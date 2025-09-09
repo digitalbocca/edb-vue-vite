@@ -215,14 +215,14 @@ Este template inclui componentes demonstrando diferentes funcionalidades:
 - Configurações responsivas
 - Temas customizados
 
-### � Animações Avançadas
+### ✨ Animações Avançadas
 
 - **Texto Rotativo**: Componente `RotatingText` com animações sofisticadas usando `motion-v`
 - **Animações de Movimento**: Integração com `motion-v` para transições e animações fluidas
 - **Auto Animate**: Animações automáticas em listas com `@formkit/auto-animate`
 - **Confetti Animado**: Efeitos visuais com `@neoconfetti/vue`
 
-### �🎉 Elementos Visuais
+### 🎉 Elementos Visuais
 
 - Confetti animado com `@neoconfetti/vue`
 - Ícones do Tabler Icons

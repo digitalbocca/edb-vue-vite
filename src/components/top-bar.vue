@@ -49,7 +49,7 @@ defineProps({
       <RotatingText
         :texts="['Vue', 'Vite', 'Vitest', 'Tailwind', 'Pinia', 'VueUse', 'ESLint', 'Axios', 'Husky', 'NeoConfetti']"
         main-class-name="px-2 sm:px-2 md:px-3 bg-green-600 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg text-xl"
-        :stagger-from="last"
+        :stagger-from="'last'"
         :initial="{ y: '100%' }"
         :animate="{ y: 0 }"
         :exit="{ y: '-120%' }"
