@@ -37,6 +37,19 @@ Este template inclui componentes demonstrando diferentes funcionalidades:
 
 ### Exemplo de Uso do RotatingText
 
+```vue
+<script setup>
+  import RotatingText from '@/blocks/text-animations/rotating-text/rotating-text.vue'
+</script>
+
+<template>
+  <RotatingText
+    :texts="['Vue','Vite','Vitest']"
+    :rotation-interval="3000"
+  />
+  </template>
+```
+
 ### 🔧 Ferramentas de Desenvolvimento
 
 - **z-vue-scan v0.0.35**: Plugin de debugging que destaca componentes Vue durante atualizações
