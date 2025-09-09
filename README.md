@@ -23,6 +23,35 @@
 
 ---
 
+## ✨ FUNCIONALIDADES INCLUÍDAS
+
+Este template inclui componentes demonstrando diferentes funcionalidades:
+
+### 🌟 Animações de Texto Avançadas
+
+- Componente `RotatingText` com transições suaves usando `motion-v`
+- Múltiplas opções de animação: spring, easing, stagger
+- Configurações de divisão por caracteres, palavras ou linhas
+- Integração com Vue Bits para componentes premium
+- Texto rotativo na barra superior exibindo tecnologias configuradas
+
+### Exemplo de Uso do RotatingText
+
+### 🔧 Ferramentas de Desenvolvimento
+
+- **z-vue-scan v0.0.35**: Plugin de debugging que destaca componentes Vue durante atualizações
+- Componentes ficam com borda vermelha quando são re-renderizados
+- Compatível com Vue 2 e Vue 3
+- Útil para identificar re-renders desnecessários
+- Ferramenta de otimização de performance
+
+### 📱 Vue Bits Integration
+
+- Integração com a biblioteca Vue Bits para componentes avançados
+- Configuração via `jsrepo.json` para download de componentes
+- Componentes premium prontos para uso
+- Sistema de animações baseado em `motion-v`
+
 ## 🚀 INSTRUÇÕES DE INSTALAÇÃO
 
 Utilize o create-edb-app:
@@ -43,13 +72,21 @@ deno run -A npm:@digitalbocca/create-edb-app vue-vite ./caminho/do/projeto
 - Instale as dependências.
 - Modifique para sua necessidade.
 
-⚠️ **ATENÇÃO:** Caso tenha algum problema durante a instalação tente usar este comando:
+⚠️ **ATENÇÃO:**
+
+- Este projeto requer **Node.js 22.0.0 ou superior**
+- Caso tenha algum problema durante a instalação tente usar este comando:
 
 ```bash
 npm i --legacy-peer-deps
 ```
 
 ## 🔧 CONFIGURAÇÃO INICIAL
+
+### REQUISITOS DO SISTEMA
+
+- **Node.js**: Versão 22.0.0 ou superior (definido no package.json)
+- **npm**: Versão compatível com Node.js 22+
 
 ### VARIÁVEIS DE AMBIENTE
 
@@ -63,6 +100,41 @@ Configure as seguintes variáveis:
 
 - `VITE_API_BASE_URL`: URL base da sua API (sem barra no final)
 - `VITE_ENV_EXAMPLE`: Texto de exemplo exibido na home
+
+### CONFIGURAÇÃO DE COMPONENTES EXTERNOS
+
+Este projeto está configurado para usar componentes do Vue Bits através do JSRepo:
+
+#### JSRepo Configuration
+
+O arquivo `jsrepo.json` está configurado para baixar componentes do Vue Bits:
+
+```json
+{
+  "repos": ["https://vue-bits.dev/ui"],
+  "includeTests": false,
+  "includeDocs": false,
+  "watermark": true,
+  "formatter": "prettier",
+  "paths": {
+    "*": "./src/blocks"
+  }
+}
+```
+
+#### Adicionando Componentes Vue Bits
+
+Para adicionar novos componentes:
+
+```bash
+# Instalar um componente específico
+npx jsrepo install <component-name>
+
+# Exemplo: componente de texto rotativo
+npx jsrepo install rotating-text
+```
+
+Os componentes são instalados automaticamente na pasta `src/blocks/`.
 
 ## 📦 COMANDOS DISPONÍVEIS
 
@@ -87,6 +159,14 @@ npm run update       # Verifica atualizações de dependências
 npm run upgrade      # Instala atualizações de dependências
 npm run md           # Verifica boas práticas no código
 npm run lint         # Executa linter ESLint
+```
+
+### Componentes Externos
+
+```bash
+npx jsrepo install <component>  # Instala componente do Vue Bits
+npx jsrepo list                # Lista componentes disponíveis
+npx jsrepo update              # Atualiza componentes instalados
 ```
 
 ## ✨ FUNCIONALIDADES INCLUÍDAS
@@ -135,17 +215,28 @@ Este template inclui componentes demonstrando diferentes funcionalidades:
 - Configurações responsivas
 - Temas customizados
 
-### 🎉 Elementos Visuais
+### � Animações Avançadas
+
+- **Texto Rotativo**: Componente `RotatingText` com animações sofisticadas usando `motion-v`
+- **Animações de Movimento**: Integração com `motion-v` para transições e animações fluidas
+- **Auto Animate**: Animações automáticas em listas com `@formkit/auto-animate`
+- **Confetti Animado**: Efeitos visuais com `@neoconfetti/vue`
+
+### �🎉 Elementos Visuais
 
 - Confetti animado com `@neoconfetti/vue`
 - Ícones do Tabler Icons
 - Animações CSS do Tailwind CSS Animated
 - Barras de progresso circulares animadas
+- Componentes de UI avançados do Vue Bits
 
 ## 🏗️ ARQUITETURA DO PROJETO
 
 ```
 src/
+├── blocks/             # Componentes avançados e animações
+│   └── TextAnimations/ # Animações de texto
+│       └── RotatingText/
 ├── components/          # Componentes Vue
 │   ├── base/           # Componentes base reutilizáveis
 │   │   ├── custom-button/
@@ -226,9 +317,9 @@ describe('Button component', () => {
 ### Build & Development
 
 - **Vite com Rolldown**: Build tool ultrarrápido com bundler Rust-based para máxima performance
-- **Vue 3**: Framework progressivo
-- **Vue Router**: Roteamento SPA
-- **Pinia**: Gerenciamento de estado
+- **Vue 3.5.21**: Framework progressivo (versão mais recente)
+- **Vue Router 4.5.1**: Roteamento SPA
+- **Pinia 3.0.3**: Gerenciamento de estado
 
 ### Styling
 
@@ -248,15 +339,30 @@ describe('Button component', () => {
 - **ESLint**: Linter JavaScript/Vue
 - **Husky**: Git hooks
 - **Vue DevTools**: Debugging no browser
+- **JSRepo**: Gerenciador de componentes para Vue Bits
+- **z-vue-scan**: Plugin de debugging para visualizar re-renders de componentes
+
+### Component Libraries
+
+- **Vue Bits**: Biblioteca de componentes premium para Vue 3
+- **JSRepo**: Ferramenta para integração de componentes externos
+- **Motion-V**: Biblioteca de animações avançadas baseada em Framer Motion
 
 ### Libraries
 
-- **@vueuse/core v13.5.0**: Composables utilitários
-- **axios v1.10.0**: Cliente HTTP
-- **uuid v11.1.0**: Geração de IDs únicos
-- **Tabler Icons v3.34.0**: Biblioteca de ícones
+- **@vueuse/core v13.9.0**: Composables utilitários
+- **axios v1.11.0**: Cliente HTTP
+- **uuid v13.0.0**: Geração de IDs únicos
+- **Tabler Icons v3.34.1**: Biblioteca de ícones
 - **Notivue v2.4.5**: Sistema de notificações
 - **vue-ellipse-progress v2.2.0**: Barras de progresso circulares animadas
+- **motion-v v1.7.1**: Biblioteca de animações avançadas para Vue 3
+- **@number-flow/vue v0.4.8**: Animações numéricas modernas
+- **vue3-apexcharts v1.8.0**: Gráficos interativos
+
+### Development Tools
+
+- **z-vue-scan v0.0.35**: Plugin de debugging para identificar re-renders
 
 ## 🚀 PERFORMANCE E OTIMIZAÇÕES
 
