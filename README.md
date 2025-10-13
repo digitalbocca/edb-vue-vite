@@ -69,6 +69,12 @@ Este template inclui componentes demonstrando diferentes funcionalidades:
 
 Utilize o create-edb-app:
 
+### Com Bun (Recomendado)
+
+```bash
+bunx @digitalbocca/create-edb-app vue-vite ./caminho/do/projeto
+```
+
 ### NPM/Node
 
 ```bash
@@ -82,24 +88,20 @@ deno run -A npm:@digitalbocca/create-edb-app vue-vite ./caminho/do/projeto
 ```
 
 - Entre na pasta.
-- Instale as dependências.
+- Instale as dependências com Bun: `bun install`
 - Modifique para sua necessidade.
 
 ⚠️ **ATENÇÃO:**
 
-- Este projeto requer **Node.js 22.0.0 ou superior**
-- Caso tenha algum problema durante a instalação tente usar este comando:
-
-```bash
-npm i --legacy-peer-deps
-```
+- Este projeto utiliza **Bun** como gerenciador de pacotes e runtime
+- O Bun fornece melhor performance e experiência de desenvolvimento
 
 ## 🔧 CONFIGURAÇÃO INICIAL
 
 ### REQUISITOS DO SISTEMA
 
-- **Node.js**: Versão 22.0.0 ou superior (definido no package.json)
-- **npm**: Versão compatível com Node.js 22+
+**Bun**: Versão 1.3.0 ou superior
+- **Node.js**: Versão 22.0.0 ou superior
 
 ### VARIÁVEIS DE AMBIENTE
 
@@ -141,10 +143,10 @@ Para adicionar novos componentes:
 
 ```bash
 # Instalar um componente específico
-npx jsrepo install <component-name>
+bunx jsrepo install <component-name>
 
 # Exemplo: componente de texto rotativo
-npx jsrepo install rotating-text
+bunx jsrepo install rotating-text
 ```
 
 Os componentes são instalados automaticamente na pasta `src/blocks/`.
@@ -154,37 +156,37 @@ Os componentes são instalados automaticamente na pasta `src/blocks/`.
 ### Desenvolvimento
 
 ```bash
-npm run dev          # Inicia o servidor de desenvolvimento
-npm run build        # Gera build de produção
+bun run dev          # Inicia o servidor de desenvolvimento (mais rápido com Bun)
+bun run build        # Gera build de produção
 ```
 
 ### Testes
 
 ```bash
-npm run test         # Executa os testes com interface gráfica
-npm run coverage     # Executa testes e gera relatório de cobertura
+bun run test         # Executa os testes com interface gráfica
+bun run coverage     # Executa testes e gera relatório de cobertura
 ```
 
 ### Manutenção
 
 ```bash
-npm run update       # Verifica atualizações de dependências
-npm run upgrade      # Instala atualizações de dependências
-npm run md           # Verifica boas práticas no código
-npm run lint         # Executa linter ESLint
+bun run update     # Lista dependências desatualizadas
+bun run upgrade    # Inicia o modo interativo de atualização
+bun run md        # Verifica boas práticas no código
+bun run lint      # Executa linter ESLint
 ```
 
 ### Componentes Externos
 
 ```bash
-npx jsrepo install <component>  # Instala componente do Vue Bits
-npx jsrepo list                # Lista componentes disponíveis
-npx jsrepo update              # Atualiza componentes instalados
+bunx jsrepo install <component>  # Instala componente do Vue Bits
+bunx jsrepo list                # Lista componentes disponíveis
+bunx jsrepo update              # Atualiza componentes instalados
 ```
 
-## ✨ FUNCIONALIDADES INCLUÍDAS
+## 🎯 COMPONENTES E FUNCIONALIDADES
 
-Este template inclui componentes demonstrando diferentes funcionalidades:
+Este template inclui diversos componentes e funcionalidades prontos para uso:
 
 ### 🕒 Relógio em Tempo Real
 
@@ -277,10 +279,10 @@ src/
 
 ```bash
 # Interface gráfica
-npm run test
+bun run test
 
 # Cobertura
-npm run coverage
+bun run coverage
 ```
 
 Os relatórios de cobertura ficam em `./tests/unit/coverage/`
@@ -327,10 +329,16 @@ describe('Button component', () => {
 
 ## 🛠️ FERRAMENTAS CONFIGURADAS
 
+### Runtime & Package Management
+
+- **Bun**: Runtime JavaScript ultrarrápido e gerenciador de pacotes moderno
+- **Bun Upgrade**: Sistema interativo de atualização de dependências
+- **Bun Install**: Instalação de dependências até 100x mais rápida que npm
+
 ### Build & Development
 
 - **Vite com Rolldown**: Build tool ultrarrápido com bundler Rust-based para máxima performance
-- **Vue 3.5.21**: Framework progressivo (versão mais recente)
+**Vue 3.5.22**: Framework progressivo (versão mais recente)
 - **Vue Router 4.5.1**: Roteamento SPA
 - **Pinia 3.0.3**: Gerenciamento de estado
 
@@ -369,9 +377,9 @@ describe('Button component', () => {
 - **Tabler Icons v3.34.1**: Biblioteca de ícones
 - **Notivue v2.4.5**: Sistema de notificações
 - **vue-ellipse-progress v2.2.0**: Barras de progresso circulares animadas
-- **motion-v v1.7.1**: Biblioteca de animações avançadas para Vue 3
+- **motion-v v1.7.2**: Biblioteca de animações avançadas para Vue 3
 - **@number-flow/vue v0.4.8**: Animações numéricas modernas
-- **vue3-apexcharts v1.8.0**: Gráficos interativos
+- **vue3-apexcharts v1.9.0**: Gráficos interativos
 
 ### Development Tools
 
@@ -411,10 +419,10 @@ O Rolldown é configurado através do override no package.json:
 ### Build de Produção
 
 ```bash
-npm run build
+bun run build
 ```
 
-O build utiliza o Rolldown bundler para máxima performance e otimização.
+O build utiliza o Rolldown bundler via Bun para máxima performance e otimização.
 Os arquivos de produção ficam na pasta `dist/`
 
 ### Vantagens do Build com Rolldown
