@@ -100,7 +100,7 @@ deno run -A npm:@digitalbocca/create-edb-app vue-vite ./caminho/do/projeto
 
 ### REQUISITOS DO SISTEMA
 
-- **Bun**: Versão 1.0.0 ou superior
+**Bun**: Versão 1.3.0 ou superior
 - **Node.js**: Versão 22.0.0 ou superior
 
 ### VARIÁVEIS DE AMBIENTE
@@ -279,10 +279,10 @@ src/
 
 ```bash
 # Interface gráfica
-npm run test
+bun run test
 
 # Cobertura
-npm run coverage
+bun run coverage
 ```
 
 Os relatórios de cobertura ficam em `./tests/unit/coverage/`
@@ -338,7 +338,7 @@ describe('Button component', () => {
 ### Build & Development
 
 - **Vite com Rolldown**: Build tool ultrarrápido com bundler Rust-based para máxima performance
-- **Vue 3.5.21**: Framework progressivo (versão mais recente)
+**Vue 3.5.22**: Framework progressivo (versão mais recente)
 - **Vue Router 4.5.1**: Roteamento SPA
 - **Pinia 3.0.3**: Gerenciamento de estado
 
@@ -377,9 +377,9 @@ describe('Button component', () => {
 - **Tabler Icons v3.34.1**: Biblioteca de ícones
 - **Notivue v2.4.5**: Sistema de notificações
 - **vue-ellipse-progress v2.2.0**: Barras de progresso circulares animadas
-- **motion-v v1.7.1**: Biblioteca de animações avançadas para Vue 3
+- **motion-v v1.7.2**: Biblioteca de animações avançadas para Vue 3
 - **@number-flow/vue v0.4.8**: Animações numéricas modernas
-- **vue3-apexcharts v1.8.0**: Gráficos interativos
+- **vue3-apexcharts v1.9.0**: Gráficos interativos
 
 ### Development Tools
 
