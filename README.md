@@ -101,7 +101,7 @@ deno run -A npm:@digitalbocca/create-edb-app vue-vite ./caminho/do/projeto
 ### REQUISITOS DO SISTEMA
 
 **Bun**: Versão 1.3.0 ou superior
-- **Node.js**: Versão 22.0.0 ou superior
+- **Node.js**: Versão 24.0.0 ou superior
 
 ### VARIÁVEIS DE AMBIENTE
 
@@ -259,7 +259,7 @@ src/
 │   └── icons/          # Ícones SVG customizados
 ├── constants/          # Constantes da aplicação
 ├── plugins/           # Plugins e configurações
-│   └── http/          # Cliente HTTP (Axios)
+│   └── http/          # Cliente HTTP (Ky)
 ├── router/            # Configuração de rotas
 ├── stores/            # Gerenciamento de estado (Pinia)
 ├── styles/            # Estilos globais (Sass/CSS)
@@ -338,9 +338,9 @@ describe('Button component', () => {
 ### Build & Development
 
 - **Vite com Rolldown**: Build tool ultrarrápido com bundler Rust-based para máxima performance
-**Vue 3.5.22**: Framework progressivo (versão mais recente)
-- **Vue Router 4.5.1**: Roteamento SPA
-- **Pinia 3.0.3**: Gerenciamento de estado
+- **Vue 3.5.24**: Framework progressivo (versão mais recente)
+- **Vue Router 4.6.3**: Roteamento SPA
+- **Pinia 3.0.4**: Gerenciamento de estado
 
 ### Styling
 
@@ -371,15 +371,15 @@ describe('Button component', () => {
 
 ### Libraries
 
-- **@vueuse/core v13.9.0**: Composables utilitários
-- **axios v1.11.0**: Cliente HTTP
+- **@vueuse/core v14.0.0**: Composables utilitários
+- **ky v1.14.0**: Cliente HTTP
 - **uuid v13.0.0**: Geração de IDs únicos
-- **Tabler Icons v3.34.1**: Biblioteca de ícones
+- **Tabler Icons v3.35.0**: Biblioteca de ícones
 - **Notivue v2.4.5**: Sistema de notificações
 - **vue-ellipse-progress v2.2.0**: Barras de progresso circulares animadas
-- **motion-v v1.7.2**: Biblioteca de animações avançadas para Vue 3
+- **motion-v v1.7.4**: Biblioteca de animações avançadas para Vue 3
 - **@number-flow/vue v0.4.8**: Animações numéricas modernas
-- **vue3-apexcharts v1.9.0**: Gráficos interativos
+- **vue3-apexcharts v1.10.0**: Gráficos interativos
 
 ### Development Tools
 

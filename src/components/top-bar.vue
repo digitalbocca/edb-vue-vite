@@ -26,10 +26,10 @@ defineProps({
 
     <div class="bg-gray-100 p-4 rounded-lg my-4 text-center gap-2 flex flex-row justify-center items-center flex-wrap">
       <span class="text-slate-700 font-monospace">
-        npm
+        bun
       </span>
       <span class="font-monospace text-slate-700">
-        init
+        create
       </span>
       <span class="font-bold font-monospace text-[#e67e22]">
         @digitalbocca/edb-app
@@ -47,7 +47,7 @@ defineProps({
         Já configurado
       </h1>
       <RotatingText
-        :texts="['Vue', 'Vite', 'Vitest', 'Tailwind', 'Pinia', 'VueUse', 'ESLint', 'Axios', 'Husky', 'NeoConfetti']"
+        :texts="['Vue', 'Vite', 'Vitest', 'Tailwind', 'Pinia', 'VueUse', 'ESLint', 'Ky', 'Husky', 'NeoConfetti']"
         main-class-name="px-2 sm:px-2 md:px-3 bg-green-600 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg text-xl"
         :stagger-from="'last'"
         :initial="{ y: '100%' }"

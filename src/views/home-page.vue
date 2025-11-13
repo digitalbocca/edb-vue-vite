@@ -1,6 +1,6 @@
 <script setup>
 
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { vConfetti } from '@neoconfetti/vue'
 import { IconBalloon } from '@tabler/icons-vue'
 
@@ -16,6 +16,7 @@ import PotatoesKitchen from '@/components/potatoes-kitchen.vue'
 import ChartsContainer from '@/components/charts-container.vue'
 import ProgressContainer from '@/components/progress-container.vue'
 import { DEFAULT_ENV_TEXT } from '@/constants'
+import http from '@/plugins/http'
 
 const envExample = import.meta.env.VITE_ENV_EXAMPLE ?? ''
 
@@ -28,6 +29,18 @@ const showConfetti = ref(false)
 const toggleConfetti = () => {
   showConfetti.value = !showConfetti.value
 }
+
+onMounted(async () => {
+  if (import.meta.env.DEV && !import.meta.env.SSR) {
+    try {
+      console.log('Starting HTTP request test...')
+      const response = await http.get('digitalbocca/edb-vue-vite')
+      console.log('HTTP request test response:', await response.json())
+    } catch (error) {
+      console.error('HTTP request test failed:', error)
+    }
+  }
+})
 
 </script>
 

@@ -11,9 +11,10 @@ The project is a Vue 3 and Vite based template with a modern and comprehensive f
 - **Pre-configured modern tools:** Vite with Rolldown bundler, Vitest, ESLint, Husky, and z-vue-scan for development debugging
 - **Extensive component ecosystem:** Base component library + Vue Bits integration via JSRepo for premium components
 - **Advanced animations:** Motion-v integration, rotating text, auto-animate, and confetti effects
-- **State management:** Pinia v3.0.3 with reactive stores
-- **Routing:** Vue Router v4.5.1 with modern setup
+- **State management:** Pinia v3.0.4 with reactive stores
+- **Routing:** Vue Router v4.6.3 with modern setup
 - **Testing infrastructure:** Complete Vitest setup with coverage reports and UI
+- **HTTP Client:** Ky for robust and modern HTTP requests
 - **Performance optimization:** Rolldown bundler for 10x faster builds
 
 ## Recently Implemented ✅
@@ -21,9 +22,9 @@ The project is a Vue 3 and Vite based template with a modern and comprehensive f
 - **Vue Bits Integration:** JSRepo configuration for premium component library access
 - **Advanced Animations:** Motion-v library with RotatingText component implementation
 - **Development Tools:** z-vue-scan for component re-render visualization
-- **Modern Dependencies:** Updated to latest versions (Vue 3.5.21, Pinia 3.0.3, etc.)
+- **Modern Dependencies:** Updated to latest versions (Vue 3.5.24, Pinia 3.0.4, etc.)
 - **Enhanced Component Library:** Multiple base components with comprehensive testing
-- **ApexCharts Integration:** Interactive charts with vue3-apexcharts v1.8.0
+- **ApexCharts Integration:** Interactive charts with vue3-apexcharts v1.10.0
 
 ## Short-Term Goals
 
