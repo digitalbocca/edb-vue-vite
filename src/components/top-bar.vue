@@ -26,10 +26,10 @@ defineProps({
 
     <div class="bg-gray-100 p-4 rounded-lg my-4 text-center gap-2 flex flex-row justify-center items-center flex-wrap">
       <span class="text-slate-700 font-monospace">
-        npm
+        bun
       </span>
       <span class="font-monospace text-slate-700">
-        init
+        create
       </span>
       <span class="font-bold font-monospace text-[#e67e22]">
         @digitalbocca/edb-app
