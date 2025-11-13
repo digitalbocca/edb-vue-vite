@@ -1,6 +1,6 @@
 <script setup>
 
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { vConfetti } from '@neoconfetti/vue'
 import { IconBalloon } from '@tabler/icons-vue'
 
@@ -30,15 +30,17 @@ const toggleConfetti = () => {
   showConfetti.value = !showConfetti.value
 }
 
-async function httpRequestTest () {
-  console.log('Starting HTTP request test...')
-
-  const response = await http.get('digitalbocca/edb-vue-vite')
-
-  console.log('HTTP request test response:', await response.json())
-}
-
-httpRequestTest()
+onMounted(async () => {
+  if (import.meta.env.DEV && !import.meta.env.SSR) {
+    try {
+      console.log('Starting HTTP request test...')
+      const response = await http.get('digitalbocca/edb-vue-vite')
+      console.log('HTTP request test response:', await response.json())
+    } catch (error) {
+      console.error('HTTP request test failed:', error)
+    }
+  }
+})
 
 </script>
 

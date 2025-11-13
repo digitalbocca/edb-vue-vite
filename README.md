@@ -101,7 +101,7 @@ deno run -A npm:@digitalbocca/create-edb-app vue-vite ./caminho/do/projeto
 ### REQUISITOS DO SISTEMA
 
 **Bun**: Versão 1.3.0 ou superior
-- **Node.js**: Versão 22.0.0 ou superior
+- **Node.js**: Versão 24.0.0 ou superior
 
 ### VARIÁVEIS DE AMBIENTE
 
