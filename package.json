@@ -58,7 +58,7 @@
     "@tabler/icons-vue": "^3.44.0",
     "@vueuse/core": "^14.3.0",
     "apexcharts": "^5.15.2",
-    "ky": "^1.14.3",
+    "ky": "2",
     "motion-v": "^2.3.0",
     "notivue": "^2.4.5",
     "pinia": "^3.0.4",
