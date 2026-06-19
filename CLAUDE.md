@@ -36,6 +36,12 @@ Husky's `pre-push` hook runs the coverage script before every push.
 
 Note: the current `main` has pre-existing ESLint errors (a parsing error in the third-party `RotatingText.vue` and trailing-comma/attribute issues in `buttons-bar.vue`). Don't assume a clean baseline; check `git diff` to confirm you didn't introduce new ones.
 
+## Dependency updates
+
+- Apply semver-**compatible** updates first (`bun update`), then validate with `bun x vitest run` + `bun run build` and commit that batch.
+- For each **major** bump, read the changelog/release notes on the web and check whether the project actually hits any breaking change (grep usage in `src/`). Only then apply it. Group safe majors together; give any major that needs code changes its own commit.
+- Validate after every batch; never bump a major blind.
+
 ## Git commits
 
 - Keep commits **small and atomic** — split unrelated changes into separate commits rather than one large one.
