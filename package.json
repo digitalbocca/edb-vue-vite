@@ -52,7 +52,7 @@
     "vue-eslint-parser": "^10.4.1"
   },
   "dependencies": {
-    "@formkit/auto-animate": "^0.9.0",
+    "@formkit/auto-animate": "^0.10.0",
     "@neoconfetti/vue": "^2.2.1",
     "@number-flow/vue": "~0.5.1",
     "@tabler/icons-vue": "^3.44.0",
@@ -69,7 +69,7 @@
     "vue-ellipse-progress": "^2.2.0",
     "vue-router": "^5.1.0",
     "vue3-apexcharts": "^1.11.1",
-    "z-vue-scan": "^0.0.35"
+    "z-vue-scan": "^0.0.37"
   },
   "overrides": {
     "vite": "npm:rolldown-vite@latest"
