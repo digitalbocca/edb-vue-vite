@@ -105,3 +105,11 @@ Entry is `src/main.js`, which registers all global plugins on the app instance: 
 Copy `sample.env` to `.env`. Only `VITE_*`-prefixed vars reach the client bundle:
 - `VITE_API_BASE_URL` — API base URL, no trailing slash (feeds the Ky client).
 - `VITE_ENV_EXAMPLE` — sample text shown on the home page.
+
+`VITE_*` vars are baked in at build time. A new one must also be added as `ARG`/`ENV` in the `Dockerfile` build stage, or the deployed bundle won't see it.
+
+## Deploy
+
+Coolify (lab VPS), build pack **dockerfile**, auto-deploy on `main`. The `Dockerfile` builds with `node:<.nvmrc version>-alpine` (`npm ci` + `npm run build`) and serves `dist/` with `nginx:alpine` on port 80. `nginx.conf` falls back to `index.html` (router uses history mode) and caches hashed `/assets/` as immutable. Nixpacks is not an option: it is in maintenance, tops out at Node 24 and silently falls back to Node 18 on `26.x`.
+
+When bumping Node, update the `Dockerfile` `FROM` tag together with `.nvmrc`, `engines.node` and README (GUARDRAILS §7).
