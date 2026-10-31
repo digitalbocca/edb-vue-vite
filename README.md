@@ -384,15 +384,7 @@ Este projeto utiliza o **Rolldown**, um bundler escrito em Rust que oferece:
 
 ### Configuração do Rolldown
 
-O Rolldown é configurado através do override no package.json:
-
-```json
-{
-  "overrides": {
-    "vite": "npm:rolldown-vite@latest"
-  }
-}
-```
+A partir do Vite 8, o Rolldown é o bundler padrão do próprio Vite. Não precisa de override nem de alias no `package.json`, basta a dependência `vite`.
 
 ### Benefícios de Performance
 

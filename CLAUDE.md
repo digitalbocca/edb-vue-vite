@@ -17,7 +17,7 @@ Scripts call the binaries directly (no `bun x`/`npx` wrapper); `npx <pkg>@latest
 ```bash
 npm install            # install dependencies (npm ci for a clean/CI install)
 npm run dev            # dev server on http://localhost:8080 (--host enabled)
-npm run build          # production build via rolldown-vite -> dist/
+npm run build          # production build (Vite 8 / Rolldown) -> dist/
 npm run lint           # ESLint over src (flat config picks .js/.vue)
 npm run test           # Vitest in UI mode (interactive, does NOT exit)
 npm run coverage       # headless run + HTML coverage to tests/unit/coverage/
@@ -56,7 +56,7 @@ Note: the current `main` has pre-existing ESLint errors (a parsing error in the 
 
 - **Why the flag exists:** `eslint-config-standard` 17.1.0 (latest) declares peers `eslint ^8`, `eslint-plugin-n ^15||^16`, `eslint-plugin-promise ^6`; this project runs eslint 10 / n 18 / promise 7, so `npm install` fails with ERESOLVE without it. It can only go away together with `eslint-config-standard` (migrating the lint base config is an open decision).
 - **Side effect:** npm then skips **all** peer dependencies, so required peers of other packages must be declared explicitly in `package.json`, or build/lint breaks. Already declared: `eslint-plugin-import` (peer of `eslint-config-standard`; without it: "ESLint couldn't find the plugin eslint-plugin-import"). Pinia 4 will need `@vue/devtools-api` declared too. Bun installed peers automatically, which is why this didn't show up before.
-- **No `overrides` for a package that is also a direct dependency** (npm fails with EOVERRIDE). Use the alias directly in the dependency instead, as done with `"vite": "npm:rolldown-vite@^7.3.1"`.
+- **No `overrides` for a package that is also a direct dependency** (npm fails with EOVERRIDE). Use the alias directly in the dependency instead (e.g. `"vite": "npm:rolldown-vite@^7.3.1"`, used here before Vite 8).
 - `npm audit` reports moderate issues in transitive deps (glob/minimatch via test-utils and eslint-plugin-import-x) whose only fix is `--force` (downgrades). Don't force; expected to clear with future majors.
 
 ## Git commits
@@ -98,7 +98,7 @@ Entry is `src/main.js`, which registers all global plugins on the app instance: 
 - `src/plugins/http/index.js` — the shared **Ky** HTTP client. `prefix` (Ky v2; formerly `prefixUrl`) comes from `VITE_API_BASE_URL`, 10s timeout, JSON default headers, with `beforeRequest` / `afterResponse` / `beforeError` hook stubs (auth-token and error-logging logic are TODOs to fill in per project).
 - `src/styles/` — both `styles.sass` and `styles.css` are imported globally in `main.js`; Tailwind v4 is wired through the `@tailwindcss/vite` plugin (no separate tailwind directives file).
 
-**Build note:** `package.json` declares `vite` as an alias, `"vite": "npm:rolldown-vite@^7.3.1"` (not via `overrides` - see npm gotchas), so builds run the Rust-based Rolldown bundler. The main chunk currently exceeds the 500 kB warning threshold; there is no `manualChunks` splitting configured.
+**Build note:** Vite 8 ships Rolldown (Rust-based) as its default bundler, so `vite` is a plain dependency - no `rolldown-vite` alias or `overrides`. Chunk splitting is configured under `build.rolldownOptions` (not `rollupOptions`). The main chunk currently exceeds the 500 kB warning threshold; there is no `manualChunks` splitting configured.
 
 ## Environment variables
 
