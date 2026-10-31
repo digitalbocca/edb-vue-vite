@@ -69,39 +69,25 @@ Este template inclui componentes demonstrando diferentes funcionalidades:
 
 Utilize o create-edb-app:
 
-### Com Bun (Recomendado)
-
-```bash
-bunx @digitalbocca/create-edb-app vue-vite ./caminho/do/projeto
-```
-
-### NPM/Node
-
 ```bash
 npm init @digitalbocca/edb-app vue-vite ./caminho/do/projeto
 ```
 
-### Deno
-
-```bash
-deno run -A npm:@digitalbocca/create-edb-app vue-vite ./caminho/do/projeto
-```
-
 - Entre na pasta.
-- Instale as dependências com Bun: `bun install`
+- Instale as dependências: `npm install`
 - Modifique para sua necessidade.
 
 ⚠️ **ATENÇÃO:**
 
-- Este projeto utiliza **Bun** como gerenciador de pacotes e runtime
-- O Bun fornece melhor performance e experiência de desenvolvimento
+- Este projeto utiliza **Node.js (LTS) + npm** como runtime e gerenciador de pacotes
+- A versão do Node está fixada no `.nvmrc` (use `nvm use`)
 
 ## 🔧 CONFIGURAÇÃO INICIAL
 
 ### REQUISITOS DO SISTEMA
 
-**Bun**: Versão 1.3.0 ou superior
 - **Node.js**: Versão 26.x (LTS)
+- **npm**: Versão 11 ou superior (vem com o Node)
 
 ### VARIÁVEIS DE AMBIENTE
 
@@ -143,10 +129,10 @@ Para adicionar novos componentes:
 
 ```bash
 # Instalar um componente específico
-bunx jsrepo install <component-name>
+npx jsrepo install <component-name>
 
 # Exemplo: componente de texto rotativo
-bunx jsrepo install rotating-text
+npx jsrepo install rotating-text
 ```
 
 Os componentes são instalados automaticamente na pasta `src/blocks/`.
@@ -156,32 +142,32 @@ Os componentes são instalados automaticamente na pasta `src/blocks/`.
 ### Desenvolvimento
 
 ```bash
-bun run dev          # Inicia o servidor de desenvolvimento (mais rápido com Bun)
-bun run build        # Gera build de produção
+npm run dev          # Inicia o servidor de desenvolvimento
+npm run build        # Gera build de produção
 ```
 
 ### Testes
 
 ```bash
-bun run test         # Executa os testes com interface gráfica
-bun run coverage     # Executa testes e gera relatório de cobertura
+npm run test         # Executa os testes com interface gráfica
+npm run coverage     # Executa testes e gera relatório de cobertura
 ```
 
 ### Manutenção
 
 ```bash
-bun run update     # Lista dependências desatualizadas
-bun run upgrade    # Inicia o modo interativo de atualização
-bun run md        # Verifica boas práticas no código
-bun run lint      # Executa linter ESLint
+npm run update     # Lista dependências desatualizadas
+npm run upgrade    # Inicia o modo interativo de atualização
+npm run md        # Verifica boas práticas no código
+npm run lint      # Executa linter ESLint
 ```
 
 ### Componentes Externos
 
 ```bash
-bunx jsrepo install <component>  # Instala componente do Vue Bits
-bunx jsrepo list                # Lista componentes disponíveis
-bunx jsrepo update              # Atualiza componentes instalados
+npx jsrepo install <component>  # Instala componente do Vue Bits
+npx jsrepo list                # Lista componentes disponíveis
+npx jsrepo update              # Atualiza componentes instalados
 ```
 
 ## 🎯 COMPONENTES E FUNCIONALIDADES
@@ -279,10 +265,10 @@ src/
 
 ```bash
 # Interface gráfica
-bun run test
+npm run test
 
 # Cobertura
-bun run coverage
+npm run coverage
 ```
 
 Os relatórios de cobertura ficam em `./tests/unit/coverage/`
@@ -331,9 +317,9 @@ describe('Button component', () => {
 
 ### Runtime & Package Management
 
-- **Bun**: Runtime JavaScript ultrarrápido e gerenciador de pacotes moderno
-- **Bun Upgrade**: Sistema interativo de atualização de dependências
-- **Bun Install**: Instalação de dependências até 100x mais rápida que npm
+- **Node.js (LTS)**: Runtime JavaScript, versão fixada no `.nvmrc`
+- **npm**: Gerenciador de pacotes, com `package-lock.json` versionado
+- **npm-check-updates**: Atualização interativa de dependências via `npm run upgrade` (roda com npx, sem virar dependência)
 
 ### Build & Development
 
@@ -419,10 +405,10 @@ O Rolldown é configurado através do override no package.json:
 ### Build de Produção
 
 ```bash
-bun run build
+npm run build
 ```
 
-O build utiliza o Rolldown bundler via Bun para máxima performance e otimização.
+O build utiliza o Rolldown bundler para máxima performance e otimização.
 Os arquivos de produção ficam na pasta `dist/`
 
 ### Vantagens do Build com Rolldown
