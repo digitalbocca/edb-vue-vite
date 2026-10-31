@@ -26,7 +26,7 @@ defineProps({
 
     <div class="bg-gray-100 p-4 rounded-lg my-4 text-center gap-2 flex flex-row justify-center items-center flex-wrap">
       <span class="text-slate-700 font-monospace">
-        bun
+        npm
       </span>
       <span class="font-monospace text-slate-700">
         create

@@ -1,6 +1,6 @@
 <script setup>
 
-import { computed, ref } from 'vue'
+import { computed, ref, useId } from 'vue'
 
 defineProps({
   label: {
@@ -10,6 +10,8 @@ defineProps({
 })
 
 const model = defineModel({ required: true, type: String })
+
+const inputId = useId()
 
 const isFocused = ref(false)
 
@@ -40,7 +42,7 @@ const labelState = computed(() => {
         :class="labelState.labelContainerClass"
       >
         <label
-          for="text-input"
+          :for="inputId"
           class="transition-all duration-200 ease-in-out"
           :class="labelState.labelTextClass"
         >
@@ -48,7 +50,7 @@ const labelState = computed(() => {
         </label>
       </div>
       <input
-        id="text-input"
+        :id="inputId"
         v-model="model"
         class="text-input w-full bg-white rounded-sm py-2 px-4 border-gray-300 border-2 transition-colors duration-200 ease-in-out focus:border-2 focus:outline-hidden focus:border-color-lime-500 focus:transition-colors focus:duration-200 focus:ease-in-out focus:ring-transparent focus:ring-0"
         type="text"
